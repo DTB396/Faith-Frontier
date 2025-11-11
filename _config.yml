@@ -1,30 +1,34 @@
 title: "Faith Frontier"
 description: "Case records, filings, and covenant-based legal commentary by Devon Tyler Barber."
 url: "https://faithfrontier.org"
-baseurl: ""
+baseurl: "" # leave empty when deploying at the domain root
 
 markdown: kramdown
+highlighter: rouge
 
 collections:
   cases:
     output: true
-    permalink: /cases/:slug/
+    permalink: /cases/:path/
   essays:
     output: true
-    permalink: /essays/:slug/
+    permalink: /essays/:path/
 
 defaults:
+  # Default for all case records in _cases
   - scope:
       path: ""
-      type: "cases"
+      type: cases
     values:
       layout: case
       body_class: page-case
+
+  # Default for all essays in _essays
   - scope:
       path: ""
-      type: "essays"
+      type: essays
     values:
-      layout: listing
+      layout: essay
       body_class: page-essays
 
 exclude:
