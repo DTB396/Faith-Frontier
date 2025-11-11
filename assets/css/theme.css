@@ -1,6 +1,182 @@
 :root {
-  --ff-ink: #e5e7eb;
-  --ff-muted: #9ca3af;
-  --ff-surface: #020617;
-  --ff-accent: #facc15;
+  --ff-ink: #e5e7eb;      /* light text on dark backgrounds */
+  --ff-muted: #9ca3af;    /* secondary text */
+  --ff-surface: #020617;  /* page background */
+  --ff-accent: #facc15;   /* accent color (brass / gold) */
+}
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--brand-bg, #fff);
+  color: var(--brand-ink, #0f172a);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.site-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.site-logo img {
+  display: block;
+  height: 48px;
+  width: auto;
+  max-width: 200px;
+}
+
+.nav-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0.5rem;
+}
+
+.nav-toggle-bar {
+  width: 24px;
+  height: 2px;
+  background-color: currentColor;
+  border-radius: 2px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.site-nav {
+  display: none;
+}
+
+.site-nav.is-open {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .site-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+}
+/* ======================================
+   Header / Navigation / Logo Styling
+====================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--ff-surface);
+  color: var(--ff-ink);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.site-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+}
+
+/* Brand */
+.site-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.site-logo img {
+  display: block;
+  height: 48px;
+  width: auto;
+  max-width: 200px;
+}
+
+/* Nav toggle (mobile) */
+.nav-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0.5rem;
+  color: var(--ff-ink);
+}
+
+.nav-toggle-bar {
+  width: 24px;
+  height: 2px;
+  background-color: currentColor;
+  border-radius: 2px;
+}
+
+/* Nav list */
+.site-nav {
+  display: none;
+}
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.site-nav a {
+  color: var(--ff-ink);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.site-nav a:hover {
+  color: var(--ff-accent);
+}
+
+/* Mobile open state */
+.site-nav.is-open {
+  display: block;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  .site-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .site-nav ul {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+}
+body {
+  margin: 0;
+  background: var(--ff-surface);
+  color: var(--ff-ink);
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
 }
