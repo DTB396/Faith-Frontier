@@ -7,7 +7,7 @@ docket: "TBD"                      # Official docket number once assigned
 court: "Superior Court of New Jersey, [Division / County]" 
 case_type: "Civil / Criminal / Administrative / Appellate"
 status: "In Preparation"           # e.g., Active – Pending Hearing, Closed – Dismissed, etc.
-filed: "YYYY-MM-DD"                # Date of filing
+filed_date: "YYYY-MM-DD"                # Date of filing
 next_event:
   label: "Hearing / Conference / Motion Date"
   date: "YYYY-MM-DD"               # Leave blank if not yet scheduled

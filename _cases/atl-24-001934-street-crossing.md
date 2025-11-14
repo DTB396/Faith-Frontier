@@ -17,7 +17,7 @@ dockets:
 primary_docket: "ATL-24-001934"
 
 status: "Active — IFP granted; record assembly and transcripts pending"
-filed: 2024-05-04
+filed_date: 2024-05-04
 judge: "Per Curiam Panel (TBD)"
 track: "PCR and Appellate Review"
 
