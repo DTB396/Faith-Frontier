@@ -1,11 +1,11 @@
 ---
-title: "The Frontier of a New Jersey Man: Biography of Devon Tyler Barber"
+layout: essay
+title: "Devon Tyler Barber – Biography"
 author: "Devon Tyler Barber"
-category: "biography"
-layout: "article"
-date: "{{ site.time }}"
-permalink: "/frontier/devon-barber/"
+date: 2025-12-03
+permalink: "/essays/devon-barber-biography/"
 description: "A constitutionally grounded biography intertwining tradesmanship, pro se litigation, and faith-rooted civic duty across New Jersey."
+tags: [biography, faithfrontier]
 ---
 
 ## Prologue: Method, Ethics, and Verification

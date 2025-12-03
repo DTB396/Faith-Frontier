@@ -1,23 +1,23 @@
 ---
 layout: listing
-title: Articles
+title: Essays & Biographies
 permalink: /articles/
-body_class: page-articles
-description: "Long-form biographies, constitutional narratives, and public-trust documentation for Faith Frontier."
+body_class: page-essays
+description: "Legacy articles path, now listing the essays collection of long-form biographies, constitutional narratives, and public-trust documentation for Faith Frontier."
 ---
 
 <section aria-labelledby="articles-heading" class="articles-index shell">
   <header class="page-header" style="max-width: 60rem; margin: 0 auto 2rem;">
-    <h1 id="articles-heading">Articles</h1>
+    <h1 id="articles-heading">Essays & Biographies</h1>
     <p style="font-size: 1.1rem; line-height: 1.7; color: var(--ff-muted);">
       Long-form biographies, constitutional narratives, and documentation curated for Faith Frontier.
       These pieces weave personal history with jurisdiction-aware analysis to support transparent,
-      community-centered recordkeeping.
+      community-centered recordkeeping. (This page now mirrors the essays collection.)
     </p>
   </header>
 
   <div class="articles-list" style="max-width: 60rem; margin: 0 auto;">
-    {% assign sorted_articles = site.articles | sort: "date" | reverse %}
+    {% assign sorted_articles = site.essays | sort: "date" | reverse %}
     {% for article in sorted_articles %}
       <article class="article-card" style="padding: 1.2rem 0; border-bottom: 1px solid rgba(255,255,255,0.08);">
         <h2 class="article-card-title" style="margin: 0 0 0.35rem 0; font-size: 1.5rem;">

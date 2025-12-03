@@ -16,13 +16,10 @@ permalink: /:title/  # for posts
 collections:
   cases:
     output: true
-    permalink: /cases/:name/
+    permalink: /cases/:path/
   essays:
     output: true
-    permalink: /essays/:name/
-  articles:
-    output: true
-    permalink: /articles/:name/
+    permalink: /essays/:slug/
   docs:
     output: true
     permalink: /docs/:name/
@@ -33,8 +30,6 @@ defaults:
     values: { layout: "case" }
   - scope: { path: "", type: "essays" }
     values: { layout: "essay" }
-  - scope: { path: "_articles", type: "articles" }
-    values: { layout: "article" }
   - scope: { path: "", type: "docs" }
     values: { layout: "doc" }
   - scope: { path: "", type: "pages" }
