@@ -17,6 +17,9 @@ collections:
   pages:
     output: true
     permalink: /:title/
+  manifesto:
+    output: true
+    permalink: /manifesto/
   cases:
     output: true
     permalink: /cases/:path/
@@ -33,6 +36,8 @@ collections:
 # Defaults
 defaults:
   - scope: { path: "_pages", type: "pages" }
+    values: { layout: "default" }
+  - scope: { path: "_manifesto", type: "manifesto" }
     values: { layout: "default" }
   - scope: { path: "_cases", type: "cases" }
     values: { layout: "case" }
