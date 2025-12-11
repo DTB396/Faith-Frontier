@@ -19,11 +19,6 @@ description: "Faith Frontier Ecclesiastical Trust builds a faith-rooted public t
         and seek restoration. We document hard cases, stand with families inside complex systems, and keep every action
         submitted to Yeshua the Messiah so that justice is both legal and holy.
       </p>
-      <div id="daily-verse" class="hero-scripture" style="margin: 1rem 0 1.25rem; color: var(--color-muted);">
-        <span class="dv-text">Loading daily verse…</span>
-        <span class="dv-ref" style="display:block; font-size: 0.95rem;"></span>
-        <span class="dv-note" style="display:block; font-size: 0.85rem; opacity: 0.8; margin-top: 0.35rem;">Updated daily (New Jersey)</span>
-      </div>
       <div class="hero-highlights">
         <article class="hero-highlight">
           <span class="hero-highlight__label">Due process clarity</span>
@@ -51,6 +46,12 @@ description: "Faith Frontier Ecclesiastical Trust builds a faith-rooted public t
 
     <div class="hero-side-panel">
       <p class="hero-badge">In the world, but not of it</p>
+      <!-- Daily Verse placed in side panel -->
+      <div id="daily-verse" class="hero-scripture" style="margin: 0.5rem 0 1rem; color: var(--color-muted);">
+        <span class="dv-text">Loading daily verse…</span>
+        <span class="dv-ref" style="display:block; font-size: 0.95rem;"></span>
+        <span class="dv-note" style="display:block; font-size: 0.85rem; opacity: 0.8; margin-top: 0.35rem;">Updated daily (New Jersey)</span>
+      </div>
       <div class="hero-panel__stat">
         <span class="hero-panel__number">12+</span>
         <span class="hero-panel__label">active case narratives</span>
