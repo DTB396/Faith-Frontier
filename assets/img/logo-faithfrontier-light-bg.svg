@@ -84,7 +84,8 @@
         font-family: 'Cinzel', 'Playfair Display', 'Libre Baskerville', 'Times New Roman', serif;
         font-size: 30px;
         font-weight: 600;
-        letter-spacing: 0.28em;
+        letter-spacing: 0.2em;
+        text-rendering: geometricPrecision;
       }
 
       .logo-faith {
@@ -93,7 +94,7 @@
 
       .logo-frontier {
         fill: var(--logo-frontier-color, #041322);
-        letter-spacing: 0.2em;
+        letter-spacing: 0.14em;
       }
 
       .wordmark-subtitle {
@@ -137,7 +138,7 @@
   <g id="logo-type" transform="translate(120 0)">
     <text class="wordmark-primary" x="0" y="50" dominant-baseline="middle">
       <tspan class="logo-faith">FAITH</tspan>
-      <tspan class="logo-frontier" dx="20">FRONTIER</tspan>
+      <tspan class="logo-frontier" dx="12">FRONTIER</tspan>
     </text>
     <text class="wordmark-subtitle" x="0" y="82">ECCLESIASTICAL TRUST</text>
   </g>

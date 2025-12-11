@@ -150,6 +150,10 @@ h3 {
   text-decoration: none;
 }
 
+.ff-brand--desktop {
+  flex-shrink: 0;
+}
+
 .ff-logo {
   display: block;
   height: auto;
@@ -157,7 +161,8 @@ h3 {
 
 /* Header logo – desktop */
 .ff-logo--header {
-  max-height: 40px;
+  max-height: 48px;
+  width: auto;
 }
 
 /* Header icon – mobile / nav */
@@ -181,8 +186,10 @@ h3 {
 }
 
 /* Mobile brand visibility */
+/*. Mobile brand handling */
 .ff-brand--mobile { display: none; }
 @media (max-width: 767px) {
+  .ff-brand--desktop { display: none; }
   .ff-brand--mobile { display: inline-flex; }
 }
 

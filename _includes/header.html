@@ -14,7 +14,7 @@
       - Use ff_header_logo_light (FAITH=#059669) when the crest sits on white or parchment surfaces.
       - Each SVG exposes --logo-faith-color and --logo-frontier-color on the root for theme overrides if the markup is ever inlined.
     -->
-    <a class="ff-brand" href="{{ '/' | relative_url }}" aria-label="Faith Frontier Ecclesiastical Trust home">
+    <a class="ff-brand ff-brand--desktop" href="{{ '/' | relative_url }}" aria-label="Faith Frontier Ecclesiastical Trust home">
       {% if site.logo_main_dark or site.logo_main_light or site.logo_main %}
         <img src="{{ ff_header_logo_dark | relative_url }}"
              data-logo-dark="{{ ff_header_logo_dark | relative_url }}"
