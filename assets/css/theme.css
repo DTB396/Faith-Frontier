@@ -442,6 +442,14 @@ h3 {
   animation: slideInRight 0.25s ease;
 }
 
+/* Flat menu polish (no submenus) */
+.site-nav.is-open .nav-list > li + li {
+  border-top: 1px solid rgba(184, 138, 57, 0.18);
+}
+.site-nav.is-open .nav-list > li a {
+  padding: 0.85rem 0.9rem;
+}
+
 /* Drawer title/header (mobile only) */
 .nav-drawer-header {
   display: flex;
