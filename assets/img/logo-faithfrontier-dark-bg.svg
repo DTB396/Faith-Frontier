@@ -1,145 +1,128 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 96" role="img" aria-labelledby="logoTitle logoDesc" style="--logo-faith-color:#ffffff; --logo-frontier-color:#d9c28a; --logo-tagline-color:#c9d0de;">
-  <title id="logoTitle">Faith Frontier crest wordmark for dark backgrounds</title>
-  <desc id="logoDesc">Orthodox cross crest with two witness crosses and regal filigree beside the Faith Frontier wordmark.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 100" role="img" aria-labelledby="logoTitle logoDesc" style="--logo-faith-color:#fdf7ec; --logo-frontier-color:#e4c88d; --logo-tagline-color:#96a9bd;">
+  <title id="logoTitle">Faith Frontier revelation crest for dark backgrounds</title>
+  <desc id="logoDesc">Christ-centered crest with global halo, orthodox cross, and the Faith Frontier wordmark proclaiming global revelation.</desc>
   <defs>
     <style>
       :root {
-        --logo-ink: #041322;
-        --logo-deep-ink: #020a16;
-        --logo-gold: #d8b061;
-        --logo-gold-muted: #b88a4c;
-        --logo-emerald: #059669;
-        --logo-emerald-deep: #0f766e;
-        --logo-cream: #fdf8ef;
-      }
-
-      #logo-mark {
-        transform-origin: 48px 48px;
+        --ff-deep: #01060f;
+        --ff-ink: #d7e5ff;
+        --ff-gold: #d6af66;
+        --ff-ember: #f9dfb5;
+        --ff-emerald: #30c48b;
+        --ff-sapphire: #00a8c5;
       }
 
       .mark-ring {
         fill: none;
-        stroke-width: 2.2;
-      }
-
-      .mark-ring--outer {
-        stroke: var(--logo-gold);
-      }
-
-      .mark-ring--inner {
-        stroke: var(--logo-emerald-deep);
-        stroke-dasharray: 4 6;
-        stroke-linecap: round;
-      }
-
-      .mark-arch {
-        fill: none;
-        stroke-linecap: round;
         stroke-width: 2;
-        stroke: var(--logo-emerald);
       }
 
-      .mark-arch--halo {
-        stroke: var(--logo-gold);
-        stroke-width: 1.6;
+      .ring-outer {
+        stroke: var(--ff-gold);
       }
 
-      .mark-foundation {
+      .ring-inner {
+        stroke: rgba(255,255,255,0.4);
+        stroke-dasharray: 5 6;
+        stroke-linecap: round;
+      }
+
+      .globe-line {
         fill: none;
-        stroke: var(--logo-emerald-deep);
-        stroke-width: 3;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-      }
-
-      .mark-rays line {
-        stroke: var(--logo-gold);
-        stroke-width: 1.8;
+        stroke: rgba(255,255,255,0.35);
+        stroke-width: 1.3;
         stroke-linecap: round;
       }
 
-      .side-cross line {
-        stroke: var(--logo-emerald);
-        stroke-width: 1.8;
-        stroke-linecap: round;
+      .crest-halo {
+        fill: rgba(4,30,53,0.4);
+        stroke: rgba(255,255,255,0.18);
+        stroke-width: 1.2;
       }
 
       .cross-core {
-        fill: var(--logo-cream);
-        stroke: var(--logo-gold);
-        stroke-width: 1.2;
+        fill: url(#crossGlow);
+        stroke: var(--ff-ember);
+        stroke-width: 1.4;
         stroke-linejoin: round;
       }
 
-      .cross-foot {
-        fill: var(--logo-gold);
-        opacity: 0.85;
+      .cross-bar {
+        fill: var(--ff-ember);
       }
 
-      .crest-star {
-        fill: var(--logo-gold);
+      .orbit {
+        stroke: var(--ff-sapphire);
+        stroke-width: 1.4;
+        stroke-linecap: round;
+        fill: none;
+      }
+
+      .orbit-dove {
+        fill: var(--ff-emerald);
       }
 
       .wordmark-primary {
         font-family: 'Cinzel', 'Playfair Display', 'Libre Baskerville', 'Times New Roman', serif;
-        font-size: 30px;
+        font-size: 28px;
         font-weight: 600;
-        letter-spacing: 0.2em;
-        text-rendering: geometricPrecision;
+        letter-spacing: 0.22em;
       }
 
       .logo-faith {
-        fill: var(--logo-faith-color, #ffffff);
+        fill: var(--logo-faith-color, #fdf7ec);
       }
 
       .logo-frontier {
-        fill: var(--logo-frontier-color, #d9c28a);
-        letter-spacing: 0.14em;
+        fill: var(--logo-frontier-color, #e4c88d);
+        letter-spacing: 0.16em;
       }
 
       .wordmark-subtitle {
         font-family: 'Inter', 'Source Sans Pro', 'Segoe UI', sans-serif;
         font-size: 11px;
+        letter-spacing: 0.36em;
         font-weight: 600;
-        letter-spacing: 0.38em;
         text-transform: uppercase;
-        fill: var(--logo-tagline-color, #c9d0de);
+        fill: var(--logo-tagline-color, #96a9bd);
+      }
+
+      .subtitle-rule {
+        stroke: rgba(255,255,255,0.25);
+        stroke-width: 1;
       }
     </style>
+    <radialGradient id="crossGlow" cx="50%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"></stop>
+      <stop offset="50%" stop-color="#ffe2b8" stop-opacity="0.8"></stop>
+      <stop offset="100%" stop-color="#d5a253" stop-opacity="0.8"></stop>
+    </radialGradient>
   </defs>
 
-  <g id="logo-mark" aria-labelledby="crestTitle crestDesc">
-    <title id="crestTitle">Crest with Trinitarian crosses</title>
-    <desc id="crestDesc">Central cross extends downward with two smaller crosses, halo, and foundation line.</desc>
-    <circle class="mark-ring mark-ring--outer" cx="48" cy="48" r="42" />
-    <circle class="mark-ring mark-ring--inner" cx="48" cy="48" r="32" />
-    <path class="mark-arch mark-arch--halo" d="M24 30 Q48 12 72 30" />
-    <path class="mark-arch" d="M18 52 Q48 64 78 52" />
-    <path class="mark-foundation" d="M16 64 Q48 78 80 64" />
-    <g class="mark-rays">
-      <line x1="48" y1="8" x2="48" y2="16" />
-      <line x1="34" y1="14" x2="30" y2="22" />
-      <line x1="62" y1="14" x2="66" y2="22" />
-    </g>
-    <g class="side-cross">
-      <line x1="26" y1="38" x2="26" y2="60" />
-      <line x1="20" y1="46" x2="32" y2="46" />
-    </g>
-    <g class="side-cross">
-      <line x1="70" y1="38" x2="70" y2="60" />
-      <line x1="64" y1="46" x2="76" y2="46" />
-    </g>
-    <path class="cross-core" d="M44 18h8c1.6 0 3 1.4 3 3v13h11c1.6 0 3 1.4 3 3v4c0 1.6-1.4 3-3 3H55v28c0 2-1.6 3.8-3.6 3.8H44.6A3.7 3.7 0 0 1 41 72V44h-11c-1.6 0-3-1.4-3-3v-4c0-1.6 1.4-3 3-3h11V21c0-1.6 1.4-3 3-3Z" />
-    <rect class="cross-foot" x="45.6" y="56" width="4.8" height="16" rx="2.2" />
-    <circle class="crest-star" cx="48" cy="26" r="2.2" />
-    <circle class="crest-star" cx="48" cy="70" r="1.7" />
+  <g id="logo-mark" transform="translate(12 4)" aria-label="Cross and globe crest">
+    <circle class="crest-halo" cx="50" cy="46" r="40"></circle>
+    <circle class="mark-ring ring-outer" cx="50" cy="46" r="44"></circle>
+    <circle class="mark-ring ring-inner" cx="50" cy="46" r="34"></circle>
+    <path class="globe-line" d="M16 46c9-12 22-18 34-18s25 6 34 18"></path>
+    <path class="globe-line" d="M84 46c-9 12-22 18-34 18s-25-6-34-18"></path>
+    <path class="globe-line" d="M50 12c-8 10-12 22-12 34s4 24 12 34"></path>
+    <path class="globe-line" d="M50 12c8 10 12 22 12 34s-4 24-12 34"></path>
+
+    <path class="orbit" d="M16 36c14-10 24-12 34-12s20 2 34 12"></path>
+    <path class="orbit" d="M16 56c14 10 24 12 34 12s20-2 34-12"></path>
+    <circle class="orbit-dove" cx="24" cy="36" r="2"></circle>
+    <circle class="orbit-dove" cx="76" cy="56" r="2.4"></circle>
+
+    <path class="cross-core" d="M44 18h12c1.6 0 3 1.4 3 3v18h14c1.7 0 3.1 1.4 3.1 3.1v4.2c0 1.7-1.4 3.1-3.1 3.1H59v28.5a4 4 0 0 1-4 4H47a4 4 0 0 1-4-4V49.4H29.9a3.1 3.1 0 0 1-3.1-3.1v-4.2c0-1.7 1.4-3.1 3.1-3.1H43V21a3 3 0 0 1 3-3Z"></path>
+    <rect class="cross-bar" x="45.5" y="57" width="9" height="18" rx="3.5"></rect>
   </g>
 
-  <g id="logo-type" transform="translate(120 0)">
-    <text class="wordmark-primary" x="0" y="50" dominant-baseline="middle">
+  <g id="logo-type" transform="translate(132 0)">
+    <text class="wordmark-primary" x="0" y="48">
       <tspan class="logo-faith">FAITH</tspan>
-      <tspan class="logo-frontier" dx="12">FRONTIER</tspan>
+      <tspan class="logo-frontier" dx="16">FRONTIER</tspan>
     </text>
-    <text class="wordmark-subtitle" x="0" y="82">ECCLESIASTICAL TRUST</text>
+    <line class="subtitle-rule" x1="0" y1="58" x2="190" y2="58"></line>
+    <text class="wordmark-subtitle" x="0" y="78">CHRIST-CENTERED GLOBAL REVELATION</text>
   </g>
 </svg>
