@@ -1,4 +1,4 @@
-// Minimal, Pages-safe intake: rename/move PDFs, update docket YAML, stage changes
+node scripts/docket-intake.js// Minimal, Pages-safe intake: rename/move PDFs, update docket YAML, stage changes
 import fs from 'fs';
 import path from 'path';
 import yaml from 'js-yaml';
