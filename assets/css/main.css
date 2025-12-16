@@ -1,3 +1,35 @@
+.root-placeholder {}
+:root {
+  --color-surface: var(--ff-surface, #0f172a);
+  --color-surface-alt: var(--ts-navy-soft, #0a1b32);
+  --color-text: var(--ff-ink, #f9fafb);
+  --color-muted: var(--ff-muted, #a8a29e);
+  --color-highlight: var(--ff-cream, #fef3c7);
+  --accent-emerald: var(--ts-emerald, #018a6a);
+  --accent-emerald-light: var(--ts-emerald-light, #24b58a);
+  --accent-brass: var(--ts-brass, #b88a39);
+  --accent-brass-muted: var(--ts-brass-muted, #a07a32);
+  /* compatibility aliases and sensible defaults */
+  --accent: var(--color-text);
+  --muted: var(--color-muted);
+  --card-bg: var(--color-surface-alt);
+
+  /* layout tokens (provide sensible fallbacks if not declared globally) */
+  --gutter: 1.5rem;
+  --max-width: 1200px;
+  --container-pad: 1rem;
+  --radius-base: var(--radius-md, 16px);
+  --shadow-base: var(--shadow-mid, 0 16px 40px rgba(0, 0, 0, 0.35));
+  --space-section: var(--space-2xl, 3rem);
+
+  /* backward-compatible aliases for legacy tokens used throughout the stylesheet */
+  --ff-cream: var(--color-highlight);
+  --ff-ink: var(--color-text);
+  --ff-muted: var(--color-muted);
+  --ff-vintage-gold: var(--accent-brass);
+  --ff-primary: var(--accent-emerald);
+}
+
 .hero-actions--centered {
   justify-content: center;
   margin-top: 2rem;
