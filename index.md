@@ -120,10 +120,10 @@ description: "Faith Frontier Ecclesiastical Trust builds a faith-rooted public t
       </div>
       <p class="hero-badge">In the world, but not of it</p>
       <!-- Daily Verse placed in side panel -->
-      <div id="daily-verse" class="hero-scripture" style="margin: 0.5rem 0 1rem; color: var(--color-muted);">
+      <div id="daily-verse" class="hero-scripture">
         <span class="dv-text">Loading daily verse…</span>
-        <span class="dv-ref" style="display:block; font-size: 0.95rem;"></span>
-        <span class="dv-note" style="display:block; font-size: 0.85rem; opacity: 0.8; margin-top: 0.35rem;">Updated daily from Atlantic County, New Jersey</span>
+        <span class="dv-ref"></span>
+        <span class="dv-note">Updated daily from Atlantic County, New Jersey</span>
       </div>
     
     <div class="hero-side-panel">

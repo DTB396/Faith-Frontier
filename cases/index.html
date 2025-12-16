@@ -32,7 +32,7 @@ description: "Documentation of lived experience navigating institutions — a pu
     </select>
   </form>
 
-  <ul id="case-list">
+  <ul id="case-list" data-cases-json="{{ '/cases.json' | relative_url }}">
     {% assign items = site.cases | sort: "filed_date" | reverse %}
     {% for c in items %}
       <li class="case-item">

@@ -20,58 +20,75 @@
     // Start closed
     toggle.setAttribute('aria-expanded', 'false');
 
-    // Toggle menu
-    toggle.addEventListener('click', function () {
-      var isOpen = nav.classList.toggle('is-open');
-      toggle.classList.toggle('is-open', isOpen);
-      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      backdrop.classList.toggle('is-visible', isOpen);
-      
-      // Prevent body scroll when menu is open
-      if (isOpen) {
-        document.body.style.overflow = 'hidden';
-        // Focus trap: move focus to first link
-        var firstLink = nav.querySelector('a');
-        if (firstLink) firstLink.focus({ preventScroll: true });
-        // Keydown handler for Tab navigation and ESC to close
-        function onKey(e) {
+    var keydownHandler = null;
+
+    function getFocusableInNav() {
+      return nav.querySelectorAll('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    }
+
+    function openNav() {
+      if (nav.classList.contains('is-open')) return;
+      nav.classList.add('is-open');
+      toggle.classList.add('is-open');
+      toggle.setAttribute('aria-expanded', 'true');
+      backdrop.classList.add('is-visible');
+      document.body.style.overflow = 'hidden';
+
+      // Focus first focusable
+      var focusable = getFocusableInNav();
+      if (focusable && focusable.length) {
+        try { focusable[0].focus({ preventScroll: true }); } catch (e) { focusable[0].focus(); }
+      }
+
+      if (!keydownHandler) {
+        keydownHandler = function (e) {
           if (e.key === 'Escape') {
-            nav.classList.remove('is-open');
-            toggle.classList.remove('is-open');
-            backdrop.classList.remove('is-visible');
-            toggle.setAttribute('aria-expanded', 'false');
-            document.body.style.overflow = '';
-            toggle.focus({ preventScroll: true });
-            window.removeEventListener('keydown', onKey);
+            closeNav(true);
             return;
           }
           if (e.key !== 'Tab') return;
-          var focusable = nav.querySelectorAll('a, button');
-          if (!focusable.length) return;
-          var first = focusable[0];
-          var last = focusable[focusable.length - 1];
+          var nodes = getFocusableInNav();
+          if (!nodes || !nodes.length) return;
+          var first = nodes[0];
+          var last = nodes[nodes.length - 1];
           var active = document.activeElement;
           if (e.shiftKey && active === first) {
-            e.preventDefault(); last.focus();
+            e.preventDefault();
+            last.focus();
           } else if (!e.shiftKey && active === last) {
-            e.preventDefault(); first.focus();
+            e.preventDefault();
+            first.focus();
           }
-        }
-        window.addEventListener('keydown', onKey);
-      } else {
-        document.body.style.overflow = '';
-        // Remove any key handlers
-        // (handled in ESC block above when closing via key)
+        };
       }
-    });
+      window.addEventListener('keydown', keydownHandler);
+    }
 
-    // Close menu when backdrop is clicked
-    backdrop.addEventListener('click', function () {
+    function closeNav(restoreFocus) {
+      if (!nav.classList.contains('is-open')) return;
       nav.classList.remove('is-open');
       toggle.classList.remove('is-open');
       backdrop.classList.remove('is-visible');
       toggle.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';
+      if (keydownHandler) window.removeEventListener('keydown', keydownHandler);
+      if (restoreFocus) {
+        try { toggle.focus({ preventScroll: true }); } catch (e) { toggle.focus(); }
+      }
+    }
+
+    // Toggle menu
+    toggle.addEventListener('click', function () {
+      if (nav.classList.contains('is-open')) {
+        closeNav(false);
+      } else {
+        openNav();
+      }
+    });
+
+    // Close menu when backdrop is clicked
+    backdrop.addEventListener('click', function () {
+      closeNav(false);
     });
 
     // Close menu when a link is tapped (mobile UX)
@@ -79,11 +96,7 @@
       var link = e.target.closest('a');
       if (!link) return;
       if (!nav.classList.contains('is-open')) return;
-      nav.classList.remove('is-open');
-      toggle.classList.remove('is-open');
-      backdrop.classList.remove('is-visible');
-      toggle.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
+      closeNav(false);
     });
 
     // Close menu on window resize to desktop
@@ -92,11 +105,7 @@
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(function () {
         if (window.innerWidth >= 768) {
-          nav.classList.remove('is-open');
-          toggle.classList.remove('is-open');
-          backdrop.classList.remove('is-visible');
-          toggle.setAttribute('aria-expanded', 'false');
-          document.body.style.overflow = '';
+          closeNav(false);
         }
       }, 250);
     });
@@ -105,12 +114,7 @@
     var closeBtn = document.querySelector('.nav-close');
     if (closeBtn) {
       closeBtn.addEventListener('click', function () {
-        nav.classList.remove('is-open');
-        toggle.classList.remove('is-open');
-        backdrop.classList.remove('is-visible');
-        toggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-        toggle.focus({ preventScroll: true });
+        closeNav(true);
       });
     }
 
@@ -147,13 +151,27 @@
         if (textEl) textEl.textContent = text || 'Daily verse unavailable.';
         if (refEl) {
           var q = encodeURIComponent(ref);
-          refEl.innerHTML = ref ? (
-            '— ' + ref + ' · '
-            + '<a href="https://www.biblegateway.com/passage/?search=' + q + '&version=GNV" target="_blank" rel="noopener">GNV</a>'
-            + ' · <a href="https://www.biblegateway.com/passage/?search=' + q + '&version=NIV" target="_blank" rel="noopener">NIV</a>'
-            + ' · <a href="https://www.biblegateway.com/passage/?search=' + q + '&version=AKJV" target="_blank" rel="noopener">AKJV</a>'
-            + ' · <a href="https://www.biblegateway.com/passage/?search=' + q + '&version=ESV" target="_blank" rel="noopener">ESV</a>'
-          ) : '';
+
+          // DOM-safe rendering (avoid innerHTML with third-party content)
+          while (refEl.firstChild) refEl.removeChild(refEl.firstChild);
+          if (ref) {
+            refEl.appendChild(document.createTextNode('— ' + ref + ' · '));
+            var versions = [
+              { label: 'GNV', version: 'GNV' },
+              { label: 'NIV', version: 'NIV' },
+              { label: 'AKJV', version: 'AKJV' },
+              { label: 'ESV', version: 'ESV' }
+            ];
+            versions.forEach(function (vItem, idx) {
+              var a = document.createElement('a');
+              a.href = 'https://www.biblegateway.com/passage/?search=' + q + '&version=' + encodeURIComponent(vItem.version);
+              a.target = '_blank';
+              a.rel = 'noopener';
+              a.textContent = vItem.label;
+              refEl.appendChild(a);
+              if (idx !== versions.length - 1) refEl.appendChild(document.createTextNode(' · '));
+            });
+          }
         }
         // Fade in after content set
         requestAnimationFrame(function(){
@@ -206,15 +224,26 @@
       }
 
       // OurManna API provides public-domain KJV text; we link GNV/NIV/AKJV/ESV for comparison.
-      fetch('https://beta.ourmanna.com/api/v1/get/?format=json')
+      var controller = null;
+      var timeoutId = null;
+      try {
+        controller = new AbortController();
+        timeoutId = setTimeout(function () {
+          try { controller.abort(); } catch (e) {}
+        }, 4500);
+      } catch (e) {}
+
+      fetch('https://beta.ourmanna.com/api/v1/get/?format=json', controller ? { signal: controller.signal } : undefined)
         .then(function (r) { return r.json(); })
         .then(function (data) {
+          if (timeoutId) clearTimeout(timeoutId);
           var item = (data && data.verse && data.verse.details) ? data.verse.details : null;
           var v = item ? { text: item.text || '', reference: item.reference || '' } : pickFallbackByDate();
           render(v);
           try { localStorage.setItem(key, JSON.stringify(v)); } catch (e) {}
         })
         .catch(function () {
+          if (timeoutId) clearTimeout(timeoutId);
           var v = pickFallbackByDate();
           render(v);
           try { localStorage.setItem(key, JSON.stringify(v)); } catch (e) {}

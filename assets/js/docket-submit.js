@@ -1,10 +1,16 @@
 // Docket submission via Cloudflare Worker
-document.getElementById('docket-form').addEventListener('submit', async (e) => {
+const form = document.getElementById('docket-form');
+if (!form) {
+  // Script may be loaded on pages without the form
+} else form.addEventListener('submit', async (e) => {
   e.preventDefault();
   
   const status = document.getElementById('status');
-  status.textContent = 'Submitting...';
-  status.style.color = 'blue';
+  if (status) {
+    status.textContent = 'Submitting...';
+    status.classList.remove('u-text-emerald', 'u-text-accent');
+    status.classList.add('u-text-muted');
+  }
 
   const slug = document.getElementById('case-slug').value;
   const date = document.getElementById('entry-date').value;
@@ -14,8 +20,11 @@ document.getElementById('docket-form').addEventListener('submit', async (e) => {
   const file = document.getElementById('pdf-file').files[0];
 
   if (!file) {
-    status.textContent = 'Please select a PDF file.';
-    status.style.color = 'red';
+    if (status) {
+      status.textContent = 'Please select a PDF file.';
+      status.classList.remove('u-text-muted', 'u-text-emerald');
+      status.classList.add('u-text-accent');
+    }
     return;
   }
 
@@ -42,19 +51,44 @@ document.getElementById('docket-form').addEventListener('submit', async (e) => {
         })
       });
 
-      const result = await response.json();
+      let result = null;
+      try {
+        result = await response.json();
+      } catch (e) {
+        result = null;
+      }
       
       if (response.ok) {
-        status.innerHTML = `Success! Pull request created: <a href="${result.pr_url}" target="_blank">${result.pr_url}</a>`;
-        status.style.color = 'green';
+        if (status) {
+          // DOM-safe message composition
+          status.textContent = '';
+          status.classList.remove('u-text-muted', 'u-text-accent');
+          status.classList.add('u-text-emerald');
+          const prefix = document.createTextNode('Success! Pull request created: ');
+          status.appendChild(prefix);
+          if (result && result.pr_url) {
+            const a = document.createElement('a');
+            a.href = result.pr_url;
+            a.target = '_blank';
+            a.rel = 'noopener';
+            a.textContent = result.pr_url;
+            status.appendChild(a);
+          }
+        }
         document.getElementById('docket-form').reset();
       } else {
-        status.textContent = `Error: ${result.error || 'Unknown error'}`;
-        status.style.color = 'red';
+        if (status) {
+          status.textContent = `Error: ${(result && result.error) ? result.error : 'Unknown error'}`;
+          status.classList.remove('u-text-muted', 'u-text-emerald');
+          status.classList.add('u-text-accent');
+        }
       }
     } catch (error) {
-      status.textContent = `Error: ${error.message}`;
-      status.style.color = 'red';
+      if (status) {
+        status.textContent = `Error: ${error.message}`;
+        status.classList.remove('u-text-muted', 'u-text-emerald');
+        status.classList.add('u-text-accent');
+      }
     }
   };
   
