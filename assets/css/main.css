@@ -1,3 +1,22 @@
+.hero-actions--centered {
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  gap: 1.25rem;
+}
+
+.btn-main {
+  background: linear-gradient(90deg, var(--accent-brass), var(--color-highlight));
+  color: #181818;
+  border: none;
+  font-weight: 700;
+  box-shadow: 0 2px 12px rgba(212, 165, 116, 0.12);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.btn-main:hover, .btn-main:focus {
+  background: linear-gradient(90deg, var(--color-highlight), var(--accent-brass));
+  box-shadow: 0 4px 18px rgba(212, 165, 116, 0.18);
+}
 /* ======================================
    Faith Frontier – Components & Pages
    (theme.css handles base + header/footer)
@@ -454,6 +473,35 @@
   .hero-side-panel {
     order: -1;
   }
+
+  .hero-actions--centered {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-brand-visual img {
+    max-width: 180px;
+    margin: 0 auto 1.25rem auto;
+    display: block;
+  }
+
+  .hero-main {
+    text-align: center;
+  }
+}
+.btn, .btn-main, .btn-ghost {
+  min-width: 180px;
+  padding: 0.85em 1.5em;
+  font-size: 1.08rem;
+  border-radius: 8px;
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+.btn:hover, .btn:focus, .btn-main:hover, .btn-main:focus, .btn-ghost:hover, .btn-ghost:focus {
+  box-shadow: 0 6px 24px rgba(212, 165, 116, 0.18);
+  transform: translateY(-2px) scale(1.03);
 }
 
 /* Section scaffolding */

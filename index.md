@@ -35,12 +35,33 @@ description: "Faith Frontier Ecclesiastical Trust builds a faith-rooted public t
           <p>Local New Jersey struggles carry global meaning. Every case journal, restored life, and repaired home becomes testimony — a small but real witness of Christ’s justice, patience, and mercy reaching beyond our state lines. Faith Frontier is local in place, universal in purpose.</p>
         </article>
       </div>
-      <div class="hero-actions">
-        <a class="btn" href="{{ '/about/' | relative_url }}">Explore Our Mission</a>
-        <a class="btn-ghost" href="{{ '/cases/' | relative_url }}">Learn Your Rights</a>
-        <a class="btn-ghost" href="{{ '/manifesto/' | relative_url }}">Read the Manifesto</a>
+      <div class="hero-actions hero-actions--centered">
+        <a class="btn btn-main" href="{{ '/about/' | relative_url }}">Explore Our Mission</a>
+        <a class="btn btn-ghost" href="{{ '/cases/' | relative_url }}">Learn Your Rights</a>
+        <a class="btn btn-ghost" href="{{ '/manifesto/' | relative_url }}">Read the Manifesto</a>
       </div>
     </div>
+
+    <div class="hero-side-panel">
+      <div class="hero-brand-visual">
+        <!-- Placeholder for brand image or motif -->
+        <img src="/assets/img/faithfrontier-mark.svg" alt="Faith Frontier Crest" style="max-width: 100%; height: auto; margin-bottom: 1.5rem;" />
+      </div>
+      <p class="hero-badge">In the world, but not of it</p>
+      <!-- Daily Verse placed in side panel -->
+      <div id="daily-verse" class="hero-scripture" style="margin: 0.5rem 0 1rem; color: var(--color-muted);">
+        <span class="dv-text">Loading daily verse…</span>
+        <span class="dv-ref" style="display:block; font-size: 0.95rem;"></span>
+        <span class="dv-note" style="display:block; font-size: 0.85rem; opacity: 0.8; margin-top: 0.35rem;">Updated daily (New Jersey)</span>
+      </div>
+      <div class="hero-panel__stat">
+        <span class="hero-panel__number">8+</span>
+        <span class="hero-panel__label">active case narratives</span>
+      </div>
+      <div class="hero-panel__stat">
+        <span class="hero-panel__number">10</span>
+        <span class="hero-panel__label">sanctuary initiatives in motion</span>
+      </div>
 
     <div class="hero-side-panel">
       <p class="hero-badge">In the world, but not of it</p>
