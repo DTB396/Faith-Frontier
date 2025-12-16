@@ -178,9 +178,48 @@ The `_data/cases-map.yml` file maps docket numbers to case slugs:
 ```yaml
 A-000313-25: street-crossing-pcr-appeal
 ATL-24-001934: street-crossing-pcr-appeal
+ATL-L-002794-25: atl-l-002794-25
 ```
 
 This helps the intake automation route PDFs to the correct case folder.
+
+### Auto-Bootstrap from Case Front Matter
+
+If `_data/cases-map.yml` is missing or empty, the intake script will automatically generate it from case front matter. The bootstrap process:
+
+1. **Scans all case files** in `_cases/` (including subdirectories with `index.md`)
+2. **Extracts docket information** from:
+   - `dockets:` array (inline or YAML list format)
+   - `docket:` single field
+   - `primary_docket:` field
+3. **Prioritizes consolidated cases** - Cases with multiple dockets are processed first, ensuring that consolidated case pages take precedence over individual docket-specific pages
+4. **Extracts slugs** from `permalink:` field or uses directory name as fallback
+5. **Writes the map** to `_data/cases-map.yml`
+
+**Example**: If you have cases with these front matter fields:
+
+```yaml
+# _cases/street-crossing-pcr-appeal/index.md
+permalink: /cases/street-crossing-pcr-appeal/
+dockets:
+  - ATL-24-001934
+  - A-000313-25
+
+# _cases/a-000313-25/index.md
+permalink: /cases/a-000313-25/
+docket: A-000313-25
+```
+
+The bootstrap will map **both** `ATL-24-001934` and `A-000313-25` to `street-crossing-pcr-appeal` (not `a-000313-25`) because the consolidated case has multiple dockets and is processed first.
+
+### Manual Updates
+
+You can manually add entries to `_data/cases-map.yml` for:
+- Cases that haven't been created yet
+- Special routing requirements
+- Legacy docket numbers
+
+The bootstrap process only runs when the map file is empty, so manual entries are preserved.
 
 ## Search Functionality
 
@@ -206,10 +245,12 @@ Example: `2025-11-12-written-appearance`
 
 ### Adding a New Case
 
-1. Create `_cases/<slug>.md` with proper front matter
+1. Create `_cases/<slug>/index.md` with proper front matter (including `dockets:` array)
 2. Create `_data/docket/<slug>.yml` (can be empty initially)
-3. Add docket number mappings to `_data/cases-map.yml`
+3. (Optional) Add docket number mappings to `_data/cases-map.yml` - or let the bootstrap auto-generate it
 4. Create folder: `assets/cases/<slug>/docket/`
+
+**Note**: If you include `dockets:` in your case front matter, the intake script will automatically add those mappings to `_data/cases-map.yml` if needed.
 
 ### Updating Docket Entries
 
