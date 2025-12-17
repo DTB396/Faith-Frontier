@@ -10,7 +10,6 @@
 
 This case folder has been normalized for intake automation. Filings listed below reflect the latest uploads.
 
-
 ## Filings Index
 
 - [20251029-notice-of-appeal.pdf](./filings/20251029-notice-of-appeal.pdf) — Notice of Appeal (PCR/Unified Plea)
