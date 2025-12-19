@@ -1,5 +1,6 @@
 # Faith Frontier
 
+<<<<<<< HEAD
 **Faith Frontier** is a Christian-informed public trust that documents legal matters, teaches civic responsibility, and stewards property initiatives with humility and accountability. The project serves the public under the U.S. Constitution and state law, and treats faith as a guide to conscience—not as extrajudicial authority.
 
 This repository powers **faithfrontier.org** and brings together:
@@ -10,11 +11,19 @@ This repository powers **faithfrontier.org** and brings together:
 - structured operational guidance for lawful stewardship efforts.
 
 The aim is sober transparency: explain what is being published, why it matters, and how neighbors can verify claims within lawful public-record systems.
+=======
+**Faith Frontier** is a faith-guided public trust and record-keeping platform focused on ethical stewardship, transparent reflection on public-interest legal matters, and the gradual development of land and community projects governed by lawful, environmentally responsible standards.
+
+This repository powers faithfrontier.org and its supporting systems, bringing together governed public-interest records, protected ecclesiastical materials, and compliant automation used for analysis, sourcing, and coordination.
+
+**Faith Frontier** is deliberately structured to maintain credibility with courts, communities, collaborators, and future partners by keeping decisions documented, reviewable, and anchored to its stated mission.
+>>>>>>> 8ac3f27 (refactor: update README for clarity and structure, enhancing mission and governance sections)
 
 ---
 
 ## Why Faith Frontier Exists
 
+<<<<<<< HEAD
 - **Witness with accountability:** Publish primary documents and neutral narratives so communities can see the procedural record for themselves.
 - **Civic discipleship:** Encourage constitutional literacy, due process, and lawful advocacy as acts of neighborly care.
 - **Stewardship and service:** Support property, housing, and land rehabilitation projects in ways that respect zoning, licensing, tax law, and corporate separateness.
@@ -53,11 +62,17 @@ Each category is labeled so readers can distinguish belief from law and understa
 - Note the status of each matter (open, closed, appealed) and the jurisdiction involved.
 
 Publishing cases in this way aims to educate citizens about lawful civic engagement and to model responsible public-record use.
+=======
+- Preserve public-interest records with clear provenance and access controls.
+- Publish faith-informed ethical reflections and essays.
+- Use limited, documented automation to assist intake and analysis.
+>>>>>>> 8ac3f27 (refactor: update README for clarity and structure, enhancing mission and governance sections)
 
 ---
 
 ## Platform & Automation Direction
 
+<<<<<<< HEAD
 Faith Frontier is evolving from a static site into a governed, automation-assisted platform that supports:
 
 - opportunity and case sourcing;
@@ -67,12 +82,28 @@ Faith Frontier is evolving from a static site into a governed, automation-assist
 - public transparency with protected internal operations.
 
 Automation is **assistive, not autonomous**: systems propose, humans decide, and every output is logged. All tooling is expected to honor privacy, licensing boundaries, and the separation between belief statements and legal records.
+=======
+Faith Frontier is transitioning from a static publication site to a governed, automation-assisted platform that supports:
 
----
+- opportunity and case identification
+
+- structured review and comparative analysis
+
+- due-diligence and verification workflows
+>>>>>>> 8ac3f27 (refactor: update README for clarity and structure, enhancing mission and governance sections)
+
+- documentation, record retention, and audit trails
+
+- public transparency alongside protected internal operations
+
+Automation is assistive rather than autonomous. Systems surface information and draft analyses; human stewards make all determinations, and outputs are recorded for review.
+
+This structure allows **Faith Frontier** to expand, in a controlled and lawful manner, into areas such as property stewardship, rehabilitation coordination, and long-term leasing support, while maintaining clear legal, ecclesiastical, and ethical boundaries.
 
 ## Repository Structure
 
 ```text
+<<<<<<< HEAD
 _cases/              # Case summaries and metadata (Markdown)
   _TEMPLATE.md       # Template for creating new cases
 cases/               # Normalized public-facing case folders with filings
@@ -87,6 +118,38 @@ assets/css/          # Stylesheets (MIT-licensed code)
 assets/js/           # Scripts (MIT-licensed code)
 assets/images/       # Logos, seals, diagrams (trademark governed)
 scripts/             # Automation utilities (MIT-licensed code)
+=======
+_cases/                     # Case summaries and metadata (Markdown)
+  <case-slug>/             # Individual case directories
+    index.md               # Case front matter and overview
+cases/                     # Public-facing case pages (generated by Jekyll)
+  <case-slug>/             
+    filings/               # PDF filings, orders, and exhibits
+    docket.yml             # Case docket metadata
+    index.html             # Case detail page
+assets/cases/              # Normalized docket files (target structure)
+  <case-slug>/docket/      # PDFs organized by case slug
+_data/docket/              # Docket entry data (YAML)
+  <case-slug>.yml          # Chronological docket entries per case
+_data/cases-map.yml        # Docket number to case slug mapping
+_essays/                   # Protected ecclesiastical narratives
+_articles/, articles/      # Long-form content and features
+_trust/                    # Trust formation and governance documents
+_manifesto/                # Mission and theological declarations
+_layouts/                  # Jekyll layout templates
+  case.html                # Standard case layout
+  case-enhanced.html       # Enhanced structured case layout
+_includes/                 # Reusable content snippets
+  case-analysis.html       # Docket display component
+assets/css/                # Stylesheets
+assets/js/                 # Client-side scripts
+  case-search.js           # Case index filtering
+assets/images/, img/       # Logos, seals, diagrams (trademark protected)
+scripts/                   # Automation and intake utilities
+  docket-intake.js         # PDF intake and normalization
+  analyze-cases.js         # AI-assisted case analysis
+worker/                    # Optional Cloudflare Worker for uploads
+>>>>>>> 8ac3f27 (refactor: update README for clarity and structure, enhancing mission and governance sections)
 ```
 
 Navigation cues:
@@ -123,37 +186,171 @@ JEKYLL_ENV=production bundle exec jekyll build
 
 ## Governance, Licensing & Trust Boundaries
 
+<<<<<<< HEAD
 Faith Frontier operates under strict governance rules. These are not optional and apply to all contributors and automation.
+=======
+**Faith Frontier operates under strict legal and ecclesiastical governance.**
+
+This repository contains **trust property** held under fiduciary duty and protected by law. All contributors, users, and automated systems must comply with these governing documents. Non-compliance may result in legal action to protect trust assets and beneficiaries.
+>>>>>>> 8ac3f27 (refactor: update README for clarity and structure, enhancing mission and governance sections)
 
 ### Legal & Trust Framework
 
-FaithFrontier content falls into two distinct categories:
+### Trust Property Declaration
 
+<<<<<<< HEAD
 1. **Source Code – Open use under the MIT License**
+=======
+All intellectual property, content, metadata, case records, analyses, and creative works in this repository are **trust property** held by:
+>>>>>>> 8ac3f27 (refactor: update README for clarity and structure, enhancing mission and governance sections)
 
-   Templates, CSS/JS, workflows, and automation scripts fall under [`LICENSE`](./LICENSE).
+**Faith Frontier Ecclesiastical Trust**  
+Trustee: Devon Tyler Barber  
+Established under ecclesiastical law and New Jersey trust principles
 
+<<<<<<< HEAD
 2. **Creative, legal, and theological content – Restricted use**
 
   Essays, metadata, branding, and case narratives are protected under [`CONTENT_LICENSE.md`](./CONTENT_LICENSE.md), [`_docs/TRADEMARK_NOTICE.md`](./_docs/TRADEMARK_NOTICE.md), and [`DISCLAIMER.md`](./DISCLAIMER.md).
+=======
+This property is held in trust for the benefit of:
+- The advancement of faith-based justice and ethical stewardship
+- Public education on due process and institutional accountability
+- The preservation of lawful records and theological works
+- Future beneficiaries of Faith Frontier's mission
 
-### Required Legal References
+### Dual Licensing Structure
+>>>>>>> 8ac3f27 (refactor: update README for clarity and structure, enhancing mission and governance sections)
 
+**Category 1: Technical Infrastructure - Limited MIT License**
+
+<<<<<<< HEAD
 - [`LICENSE`](./LICENSE): MIT license for code only.
 - [`CONTENT_LICENSE.md`](./CONTENT_LICENSE.md): Ecclesiastical license for all non-code works.
 - [`_docs/TRADEMARK_NOTICE.md`](./_docs/TRADEMARK_NOTICE.md): Protection for FaithFrontier marks, logos, seals, and visual theology.
 - [`DISCLAIMER.md`](./DISCLAIMER.md): Reliance, liability, and public-trust usage boundaries.
+=======
+Only the following technical components are MIT-licensed per [`LICENSE`](./LICENSE) to enable infrastructure reuse:
+- Jekyll layout templates (`_layouts/`, `_includes/`)
+- Stylesheets and visual presentation code (`assets/css/`)
+- Client-side JavaScript functionality (`assets/js/`)
+- Automation and build scripts (`scripts/`, workflows)
+>>>>>>> 8ac3f27 (refactor: update README for clarity and structure, enhancing mission and governance sections)
 
-Every contribution must preserve these boundaries. Do **not** treat essays, case records, metadata, or imagery as open-source material; obtain written approval before republishing any protected work.
+This license applies **solely to the code structure**, not to any content, documentation, metadata, or intellectual work contained therein.
+
+**Category 2: Trust Property - Protected by Law**
+
+All other works are **trust property** protected under multiple legal frameworks:
+
+- [`CONTENT_LICENSE.md`](./CONTENT_LICENSE.md) - Ecclesiastical license governing all non-code works
+- [`TRADEMARK_NOTICE.md`](./TRADEMARK_NOTICE.md) - Protection of Faith Frontier marks, seals, and brand identity
+- [`DISCLAIMER.md`](./DISCLAIMER.md) - Legal boundaries, liability limitations, and usage restrictions
+
+Protected works include but are not limited to:
+- Case records, docket summaries, and legal analyses
+- Essays, narratives, and theological writings
+- Trust formation documents and governance materials
+- All metadata, categorization, and organizational structures
+- Branding, logos, seals, and visual theology
+- AI-generated analyses and commentary
+- Documentation of any kind
+
+### Legal Enforceability
+
+These protections are **legally enforceable** under:
+- New Jersey trust law
+- Federal copyright law (17 U.S.C. § 101 et seq.)
+- Trademark law (15 U.S.C. § 1051 et seq.)
+- Ecclesiastical law and First Amendment protections
+- Contract law (for contributors and users)
+
+**Unauthorized use, reproduction, or distribution** of trust property may result in:
+- Immediate cease and desist demands
+- Copyright infringTrust Property Boundaries
+
+### Protected Trust Property (Legally Enforceable)
+
+**Ecclesiastical & Documentary Works:**
+- `_cases/` - Case summaries, metadata, and legal analyses (**trust property**)
+- `_articles/` - Long-form articles and features (**trust property**)
+- `_essays/` - Theological and faith-based narratives (**trust property**)
+- `_manifesto/` - Mission declarations and credos (**trust property**)
+- `_pages/` - Site content and narrative pages (**trust property**)
+- `_posts/` - Blog posts and announcements (**trust property**)
+- `_trust/` - Trust formation and governance documents (**trust property**, **legally privileged**)
+
+**Case Records & Docket Systems:**
+- `cases/` - Public-facing case pages (**trust curation**, **protected organization**)
+- `assets/cases/` - Organized docket files (**trust property metadata**)
+- `_data/docket/` - Docket entry data and chronologies (**trust property**)
+- `_data/cases-map.yml` - Case mapping and categorization (**trust property**)
+
+**Note:** Public-record court filings (PDFs) remain in the public domain per court rules, but **Faith Frontier's selection, organization, metadata, summaries, analyses, and commentary** are **trust property** protected by copyright and ecclesiastical license.
+
+**Branding & Identity:**
+- `assets/images/`, `assets/img/` - All logos, seals, marks, and visual identity (**trademark protected**, **trust property**)
+- Faith Frontier name, wordmarks, and brand elements (**registered trademarks or common law marks**)
+
+**Documentation:**
+- All `.md` files (excluding `LICENSE`) - **Trust property** protected under `CONTENT_LICENSE.md`
+
+### Limited MIT-Licensed Components (Technical Code Only)
+
+**Infrastructure Code (MIT License Applies):**
+- `_layouts/`, `_includes/` - Jekyll template structure only (content within is **trust property**)
+- `assets/css/` - Stylesheet code only (design choices and branding remain **trust property**)
+- `assets/js/` - JavaScript functionality only
+- `scripts/` - Automation utilities and build tools
+- `.github/workflows/` - CI/CD automation
+
+**Important:** Even within MIT-licensed directories, **any content, documentation, comments, or intellectual work** remains **trust property**. The MIT license covers **technical implementation only**.
+
+### Contributor and User Obligations
+
+When adding, modifying, or using material from this repository:
+
+1. **Identify the category:** Technical code vs. trust property
+2. **Preserve all license notices** - Removal is prohibited
+3. **Respect trust boundaries** - Do not extract, republish, or commercialize trust property
+4. **Obtain written permission** - Required for any non-permitted use of trust property
+5. **Reference governing documents** - In all derivative works or citations
+
+**Failure to comply may result in legal action to protect the trust and its beneficiaries.**
+**Violation of these terms constitutes:**
+1. Breach of the content license
+2. Unauthorized use of trust property
+3. Potential copyright and trademark infringement
+4. Breach of fiduciary duty (for contributors with access)
+
+**No contribution, fork, or derivative work may:**
+- Remove or modify license notices
+- Misrepresent authorship or ownership
+- Circumvent ecclesiastical governance
+- Use Faith Frontier branding without written permission
+- Republish protected works without explicit authorization
 
 ### Directory-Level Enforcement
 
+<<<<<<< HEAD
 - `_cases/`, `_articles/`, `_essays/`, `_manifesto/`, `_pages/`, `_posts/`, `_trust/`: Markdown narratives governed by `CONTENT_LICENSE.md`.
 - `cases/`: Filings and exhibits. Public-record PDFs remain public domain, but FaithFrontier's summaries and organization remain protected.
 - `assets/images/`: Logos and artwork subject to `_docs/TRADEMARK_NOTICE.md`.
 - `_layouts/`, `_includes/`, `assets/css/`, `assets/js/`, `scripts/`, workflows: MIT-licensed code covered by `LICENSE`.
+=======
+**Faith Frontier Trust Property (Proprietary):**
+- `_cases/`, `_articles/`, `_essays/`, `_manifesto/`, `_pages/`, `_posts/`, `_trust/` - All narratives, metadata, and case documentation
+- `cases/`, `assets/cases/`, `_data/docket/` - Case organization, summaries, and docket data (public-record PDFs remain public domain, but FaithFrontier's curation, metadata, and analysis are protected)
+- `assets/images/`, `assets/img/` - All logos, seals, and branding subject to `TRADEMARK_NOTICE.md`
+- Documentation files (`*.md`) - All documentation is Faith Frontier Trust property
+>>>>>>> 8ac3f27 (refactor: update README for clarity and structure, enhancing mission and governance sections)
 
-When adding new material, identify whether it is code or content, apply the appropriate license, and reference the governing document where necessary.
+**MIT-Licensed Code (Technical Infrastructure Only):**
+- `_layouts/`, `_includes/` - Jekyll templates
+- `assets/css/`, `assets/js/` - Stylesheets and scripts
+- `scripts/`, `.github/workflows/` - Automation utilities
+
+When adding new material, identify whether it is **technical code** (MIT) or **content/documentation** (Faith Frontier Trust property). Reference the appropriate governing document.
 
 ---
 
@@ -185,12 +382,47 @@ Nothing in this repository constitutes legal advice. Review [`DISCLAIMER.md`](./
 
 ---
 
-## Contributions
+## Contributions & Access Control
 
-- Code contributions are welcome; keep them MIT-compatible.
-- Content updates require approval to preserve accuracy, privacy, and ecclesiastical governance.
+### Contribution Guidelines
 
-Questions, permissions, or coordination requests: **[info@tillerstead.com](mailto:info@tillerstead.com)**
+**Technical code contributions** (templates, CSS, JS, build scripts) may be submitted under MIT terms with the following requirements:
+- Contributor must acknowledge that only technical implementation is licensed under MIT
+- Any embedded content, comments, or documentation remains trust property
+- Contributor assigns all intellectual property rights in creative/documentary aspects to Faith Frontier Ecclesiastical Trust
+- Contribution must not violate any other license or legal boundary
+
+**Content contributions** (cases, essays, analyses, metadata, documentation) require:
+- Written approval from the trustee before submission
+- Assignment of all rights to Faith Frontier Ecclesiastical Trust
+- Compliance with ecclesiastical governance and theological standards
+- Preservation of accuracy, privacy protections, and trust fiduciary duties
+
+### Access and Permission Requests
+
+For permissions, collaborations, or questions regarding trust property:
+
+**Faith Frontier Ecclesiastical Trust**  
+Trustee: Devon Tyler Barber  
+Email: **[info@tillerstead.com](mailto:info@tillerstead.com)**
+
+Requests must include:
+- Specific material or content sought
+- Intended use and purpose
+- Duration and scope of use
+- Attribution and licensing terms proposed
+
+**Commercial use, republication, or derivative works** require explicit written license agreements and may involve licensing fees to support the trust's mission.
+
+### Fiduciary Notice
+
+The trustee operates under **fiduciary duty** to:
+- Protect trust property from unauthorized use or misappropriation
+- Preserve the integrity and mission of Faith Frontier
+- Ensure proper attribution and licensing compliance
+- Defend trust property through legal action when necessary
+
+All interactions with this repository are subject to these fiduciary obligations.
 
 ---
 
