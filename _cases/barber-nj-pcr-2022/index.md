@@ -19,6 +19,7 @@ tags:
 - pcr
 - faith-frontier
 assets_dir: /cases/barber-nj-pcr-2022/filings/
+overview: 'Post-conviction relief petition challenging the 2022 conviction, focusing on due process violations, public safety concerns, and fidelity to the record. Filed October 2025 with supporting certification and supplemental record requests for appellate transmittal.'
 documents:
 - label: PCR Petition
   path: 10-26-2025-Barber Post Conviction Relief Petition October 2025.pdf

@@ -1,6 +1,6 @@
 ---
 layout: case
-title: A-000313-25
+title: A-000313-25 – Street Crossing Appeal
 short_title: A-000313-25
 slug: a-000313-25
 court: Superior Court of New Jersey, Appellate Division
@@ -13,6 +13,7 @@ status: active
 filed_date: 2024-10-29
 last_updated: 2025-12-17
 permalink: /cases/a-000313-25/
+overview: 'Appellate Division matter arising from a street-crossing conviction originating in Atlantic County. This page serves as a clean, verifiable public record for docket A-000313-25, linking to operative orders and filings while preserving a chronological procedural history consistent with Faith Frontier integrity-first archival standards.'
 summary: 'Appellate Division matter arising from a street-crossing conviction originating in Atlantic County.
 
   This page serves as a clean, verifiable public record for docket A-000313-25, linking to the

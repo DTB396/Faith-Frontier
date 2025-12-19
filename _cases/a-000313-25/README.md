@@ -1,6 +1,7 @@
 ---
 case_slug: readme
 slug: readme
+published: false
 ---
 # A-000313-25
 

@@ -17,6 +17,7 @@ tags:
 - federal
 - civil-rights
 assets_dir: /cases/usdj-1-22-cv-06206/filings/
+overview: 'Federal civil rights action filed October 2022, documenting constitutional violations and seeking remedies under federal law. Includes original complaint, amended complaint filed August 2025, and motion to reopen proceedings with supporting exhibits and declarations.'
 documents:
 - label: Original Complaint
   path: 20221009-original-complaint.pdf
