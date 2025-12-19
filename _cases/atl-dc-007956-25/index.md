@@ -42,6 +42,4 @@ This matter documents toll-enforcement claims alongside counterclaims challengin
 - **8 Oct 2025:** Counterclaim and discovery packet delivered, outlining damages from State Contractor fraud.
 - **27 Oct 2025:** Court issued order on default/discovery; ongoing correspondence (Nov. letters) continues pressing for accessible hearings.
 
-## AI-Powered Case Analysis
-
-AI-generated judicial and journalistic notes will appear here when `_data/analysis/atl-dc-007956-25.yml` is populated.
+{% include case-analysis.html %}

@@ -45,6 +45,4 @@ Action seeking declaratory relief related to vehicle ownership. The record below
 - **29 Oct 2025:** Amended complaint filed to clarify title relief, damages, and constitutional claims.
 - **Ongoing:** Service proofs and indemnity negotiations remain in progress; updates will be layered into this record as orders issue.
 
-## AI-Powered Case Analysis
-
-Once generated, automated analysis from `_data/analysis/atl-l-002869-25.yml` will display here.
+{% include case-analysis.html %}

@@ -41,6 +41,4 @@ This filing covers the Law Division civil action focused on rebalancing the trac
 - **16-28 Oct 2025:** Supplemental memoranda, OffenderWatch research, and first amended pleadings were transmitted to document the full factual basis.
 - **7 Nov 2025:** Order to Change Track Assignment granted, moving the docket into the appropriate calendar. Subsequent scheduling correspondence resides inside the case assets directory.
 
-## AI-Powered Case Analysis
-
-Once generated, AI commentary stored in `_data/analysis/atl-l-002794-25.yml` will display here to document oversight and narrative context.
+{% include case-analysis.html %}

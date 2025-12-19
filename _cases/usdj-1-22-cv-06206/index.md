@@ -28,6 +28,4 @@ case_slug: usdj-1-22-cv-06206
 ---
 Federal civil-rights action documenting the original filing and subsequent motion practice to reopen proceedings. Exhibits, declarations, and service materials are cataloged in the docket entries below.
 
-## AI-Powered Case Analysis
-
-When available, AI-generated oversight for this matter will be drawn from `_data/analysis/usdj-1-22-cv-06206.yml`.
+{% include case-analysis.html %}

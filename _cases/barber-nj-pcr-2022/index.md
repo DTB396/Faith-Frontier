@@ -35,6 +35,4 @@ This petition challenges the handling of the 2022 conviction, focusing on due pr
 
 The docket below mirrors the submissions lodged with the Law Division and materials transmitted for appellate oversight.
 
-## AI-Powered Case Analysis
-
-Automated oversight and reporting will appear here after the AI pipeline processes `_data/analysis/barber-nj-pcr-2022.yml`.
+{% include case-analysis.html %}

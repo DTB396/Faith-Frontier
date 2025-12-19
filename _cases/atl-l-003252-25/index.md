@@ -19,11 +19,7 @@ case_slug: atl-l-003252-25
 
 ## Docket
 
-{% include case-analysis.html slug="atl-l-003252-25" %}
-
-## Documents
-
-All filings and evidence are available in the [case folder](/cases/atl-l-003252-25/).
+{% include case-analysis.html %}
 
 ## Notes
 

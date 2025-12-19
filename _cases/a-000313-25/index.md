@@ -43,29 +43,9 @@ Faith Frontier maintains this page to (1) preserve a coherent timeline, (2) cent
 
 > If any date below is inconsistent with the linked PDF or official docket, update the timeline to match the primary source.
 
-- **2024-10-29:** Notice of Appeal docketed as **A-000313-25**; fee-waiver / in forma pauperis (IFP) status granted per order(s) (see Documents).
+- **2024-10-29:** Notice of Appeal docketed as **A-000313-25**; fee-waiver / in forma pauperis (IFP) status granted per order(s) (see Docket).
 
-## AI-Powered Case Analysis
-
-Once generated, automated analysis from `_data/analysis/a-000313-25.yml` will display on this page.
-
-## Documents
-
-All filings and evidence are stored in the case directory: **/cases/a-000313-25/**.
-
-Suggested core index (update filenames/paths to match what is actually present in your folder):
-
-- **Appellate Order (IFP Granted)**  
-  `/cases/a-000313-25/filings/order-granted-ifp.pdf`  
-  *Fee-waiver / in forma pauperis status approved.*
-
-- **Appellate Order (Docketing / Processing)**  
-  `/cases/a-000313-25/filings/order-granted.pdf`  
-  *Order acknowledging docketing/processing; see PDF for exact language.*
-
-- **Notice of Appeal**  
-  `/cases/a-000313-25/filings/notice-of-appeal.pdf`  
-  *If present; include only if the file exists with this or similar name.*
+{% include case-analysis.html %}
 
 ## Notes
 
