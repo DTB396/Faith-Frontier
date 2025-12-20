@@ -2,8 +2,15 @@
 /**
  * Faith Frontier Content Refactor Tool
  * 
- * Uses copilot-instructions.md governance framework to validate and refactor
+ * Uses centralized /.ai/ governance framework to validate and refactor
  * site content for compliance with mission, tone, and legal standards.
+ * 
+ * Loads governance in hierarchical order:
+ *   1. SYSTEM.md (foundational rules)
+ *   2. STYLE.md (writing standards)
+ *   3. DOMAIN.md (project context)
+ *   4. COMPLIANCE.md (legal boundaries)
+ *   5. OUTPUT_RULES.md (technical specs)
  * 
  * Usage:
  *   node scripts/refactor-with-governance.js --all
@@ -25,7 +32,14 @@ const ROOT_DIR = path.resolve(__dirname, '..');
 
 // Configuration
 const CONFIG = {
-  copilotInstructionsPath: path.join(ROOT_DIR, '.github/copilot-instructions.md'),
+  // Load governance files from /.ai/ directory in prescribed order
+  governanceFiles: [
+    path.join(ROOT_DIR, '.ai/SYSTEM.md'),
+    path.join(ROOT_DIR, '.ai/STYLE.md'),
+    path.join(ROOT_DIR, '.ai/DOMAIN.md'),
+    path.join(ROOT_DIR, '.ai/COMPLIANCE.md'),
+    path.join(ROOT_DIR, '.ai/OUTPUT_RULES.md'),
+  ],
   sectionsToScan: {
     essays: path.join(ROOT_DIR, '_essays'),
     cases: path.join(ROOT_DIR, '_cases'),
@@ -96,7 +110,7 @@ class GovernanceRefactorTool {
       this.openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
     }
     
-    this.copilotInstructions = '';
+    this.governanceInstructions = '';
     this.results = {
       scanned: 0,
       issues: [],
@@ -113,12 +127,26 @@ class GovernanceRefactorTool {
     console.log('🔧 Faith Frontier Governance Refactor Tool');
     console.log('='.repeat(60));
     
-    // Load copilot instructions
+    // Load governance files from /.ai/ directory
     try {
-      this.copilotInstructions = fs.readFileSync(CONFIG.copilotInstructionsPath, 'utf8');
-      console.log('✓ Loaded governance framework from copilot-instructions.md');
+      const governanceParts = [];
+      for (const govFile of CONFIG.governanceFiles) {
+        if (fs.existsSync(govFile)) {
+          const content = fs.readFileSync(govFile, 'utf8');
+          const fileName = path.basename(govFile);
+          governanceParts.push(`\n---\n# ${fileName}\n---\n${content}`);
+          console.log(`✓ Loaded ${fileName}`);
+        } else {
+          console.warn(`⚠️  Missing governance file: ${path.basename(govFile)}`);
+        }
+      }
+      
+      this.governanceInstructions = governanceParts.join('\n\n');
+      console.log('✓ Governance framework loaded from /.ai/ directory');
+      console.log(`  Files loaded: ${CONFIG.governanceFiles.length}`);
+      console.log(`  Total size: ${(this.governanceInstructions.length / 1024).toFixed(1)} KB`);
     } catch (error) {
-      console.error('✗ Failed to load copilot-instructions.md:', error.message);
+      console.error('✗ Failed to load governance framework:', error.message);
       process.exit(1);
     }
 
@@ -360,7 +388,7 @@ class GovernanceRefactorTool {
         messages: [
           {
             role: 'system',
-            content: this.copilotInstructions,
+            content: this.governanceInstructions,
           },
           {
             role: 'user',

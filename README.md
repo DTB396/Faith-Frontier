@@ -1,6 +1,5 @@
 # Faith Frontier
 
-<<<<<<< HEAD
 **Faith Frontier** is a Christian-informed public trust that documents legal matters, teaches civic responsibility, and stewards property initiatives with humility and accountability. The project serves the public under the U.S. Constitution and state law, and treats faith as a guide to conscience—not as extrajudicial authority.
 
 This repository powers **faithfrontier.org** and brings together:
@@ -10,20 +9,12 @@ This repository powers **faithfrontier.org** and brings together:
 - assistive automation for research, intake, and documentation; and
 - structured operational guidance for lawful stewardship efforts.
 
-The aim is sober transparency: explain what is being published, why it matters, and how neighbors can verify claims within lawful public-record systems.
-=======
-**Faith Frontier** is a faith-guided public trust and record-keeping platform focused on ethical stewardship, transparent reflection on public-interest legal matters, and the gradual development of land and community projects governed by lawful, environmentally responsible standards.
-
-This repository powers faithfrontier.org and its supporting systems, bringing together governed public-interest records, protected ecclesiastical materials, and compliant automation used for analysis, sourcing, and coordination.
-
-**Faith Frontier** is deliberately structured to maintain credibility with courts, communities, collaborators, and future partners by keeping decisions documented, reviewable, and anchored to its stated mission.
->>>>>>> 8ac3f27 (refactor: update README for clarity and structure, enhancing mission and governance sections)
+The platform is deliberately structured to maintain credibility with courts, communities, collaborators, and future partners by keeping decisions documented, reviewable, and anchored to its stated mission. The aim is sober transparency: explain what is being published, why it matters, and how neighbors can verify claims within lawful public-record systems.
 
 ---
 
 ## Why Faith Frontier Exists
 
-<<<<<<< HEAD
 - **Witness with accountability:** Publish primary documents and neutral narratives so communities can see the procedural record for themselves.
 - **Civic discipleship:** Encourage constitutional literacy, due process, and lawful advocacy as acts of neighborly care.
 - **Stewardship and service:** Support property, housing, and land rehabilitation projects in ways that respect zoning, licensing, tax law, and corporate separateness.
@@ -62,11 +53,6 @@ Each category is labeled so readers can distinguish belief from law and understa
 - Note the status of each matter (open, closed, appealed) and the jurisdiction involved.
 
 Publishing cases in this way aims to educate citizens about lawful civic engagement and to model responsible public-record use.
-=======
-- Preserve public-interest records with clear provenance and access controls.
-- Publish faith-informed ethical reflections and essays.
-- Use limited, documented automation to assist intake and analysis.
->>>>>>> 8ac3f27 (refactor: update README for clarity and structure, enhancing mission and governance sections)
 
 ---
 
@@ -78,31 +64,15 @@ Faith Frontier is evolving from a static site into a governed, automation-assist
 - opportunity and case sourcing;
 - structured analysis and scoring;
 - due-diligence workflows;
+Faith Frontier is evolving from a static site into a governed, automation-assisted platform that supports:
+
+- opportunity and case sourcing;
+- structured analysis and scoring;
+- due-diligence workflows;
 - documentation and audit trails; and
 - public transparency with protected internal operations.
 
-Automation is **assistive, not autonomous**: systems propose, humans decide, and every output is logged. All tooling is expected to honor privacy, licensing boundaries, and the separation between belief statements and legal records.
-=======
-Faith Frontier is transitioning from a static publication site to a governed, automation-assisted platform that supports:
-
-- opportunity and case identification
-
-- structured review and comparative analysis
-
-- due-diligence and verification workflows
->>>>>>> 8ac3f27 (refactor: update README for clarity and structure, enhancing mission and governance sections)
-
-- documentation, record retention, and audit trails
-
-- public transparency alongside protected internal operations
-
-Automation is assistive rather than autonomous. Systems surface information and draft analyses; human stewards make all determinations, and outputs are recorded for review.
-
-This structure allows **Faith Frontier** to expand, in a controlled and lawful manner, into areas such as property stewardship, rehabilitation coordination, and long-term leasing support, while maintaining clear legal, ecclesiastical, and ethical boundaries.
-
-## Repository Structure
-
-```text
+Automation is **assistive, not autonomous**: systems propose, humans decide, and every output is logged. All tooling is expected to honor privacy, licensing boundaries, and the separation between belief statements and legal records
 <<<<<<< HEAD
 _cases/              # Case summaries and metadata (Markdown)
   _TEMPLATE.md       # Template for creating new cases
