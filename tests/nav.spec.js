@@ -1,13 +1,13 @@
 import { expect, test } from "@playwright/test";
 
-const NAV_SELECTOR = "#site-nav, .site-nav";
+const NAV_SELECTOR = "#premium-nav-mobile";
 
 test.describe("mobile navigation drawer", () => {
   test("opens via toggle and closes via backdrop", async ({ page }) => {
     await page.goto("/");
 
-    const nav = page.locator(NAV_SELECTOR).first();
-    const toggle = page.locator(".nav-toggle");
+    const nav = page.locator(NAV_SELECTOR);
+    const toggle = page.locator(".premium-nav-toggle");
 
     await expect(toggle).toBeVisible();
     await expect(nav).not.toHaveClass(/is-open/);
@@ -16,7 +16,7 @@ test.describe("mobile navigation drawer", () => {
 
     await expect(nav).toHaveClass(/is-open/);
 
-    const backdrop = page.locator(".nav-backdrop");
+    const backdrop = page.locator(".premium-nav-overlay");
     await expect(backdrop).toBeAttached();
     await expect(backdrop).toHaveClass(/is-visible/);
 
