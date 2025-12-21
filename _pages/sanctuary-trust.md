@@ -16,7 +16,7 @@ hide_hero: true
   <div class="trust-note trust-note--muted">
     <h2>Ecclesiastical &amp; Spiritual Context</h2>
     <p>
-    These records are maintained as part of Faith Frontier’s ecclesiastical and spiritual stewardship. They are not legal advice, not court filings, and not sworn statements under penalty of perjury. Civil filings live in the appropriate court dockets and should be read in that context. For clarity or pastoral context, email <a href="mailto:info@Tillerstead.com">info@Tillerstead.com</a>.
+    These records are maintained as part of Faith Frontier’s ecclesiastical and spiritual stewardship. They are not legal advice or court filings. Court dockets and documents filed under penalty of perjury (such as sworn statements and certifications) remain under the jurisdiction of the appropriate court and are referenced here in good faith to honor transparency and integrity. Nothing authored on this site constitutes sworn testimony unless explicitly identified as a court document. For clarity or pastoral context, email <a href="mailto:info@Tillerstead.com">info@Tillerstead.com</a>.
   </p>
 </div>
 </section>
