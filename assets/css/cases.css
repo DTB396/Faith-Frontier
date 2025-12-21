@@ -498,7 +498,7 @@
 }
 
 .preamble__inner {
-  max-width: 62rem;
+  max-width: 72rem;  /* Increased from 62rem */
   margin: 0 auto;
   text-align: center;
 }
@@ -520,7 +520,7 @@
 
 .preamble__body {
   margin: 0 auto var(--space-2xl);
-  max-width: 54rem;
+  max-width: 62rem;  /* Increased from 54rem */
   line-height: var(--lh-loose);
   color: var(--ff-text);
   font-size: var(--text-lg);

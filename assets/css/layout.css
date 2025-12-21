@@ -304,7 +304,7 @@
 }
 
 .hero-lead {
-  max-width: 48rem;
+  max-width: 56rem;  /* Increased from 48rem */
   margin: 0 0 var(--space-xl);
   color: var(--ff-text);
   font-size: clamp(var(--text-lg), 2.2vw, var(--text-xl));
