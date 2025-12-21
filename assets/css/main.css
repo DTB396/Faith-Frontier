@@ -81,7 +81,7 @@
 /* Generic sections */
 
 .section-intro {
-  max-width: 56rem;  /* Increased from 48rem for better desktop reading */
+  max-width: 72rem;  /* Increased for better desktop reading width */
   margin: 0 auto 2rem;
   padding: 0 1.25rem;
 }
@@ -94,7 +94,7 @@
 }
 
 .section-content {
-  max-width: 56rem;  /* Increased from 48rem for better desktop reading */
+  max-width: 72rem;  /* Increased for better desktop reading width */
   margin: 0 auto 2rem;
   padding: 0 1.25rem;
 }
@@ -324,7 +324,7 @@
 
 .preamble__body {
   margin: 0 auto 2rem;
-  max-width: 62rem;  /* Increased from 54rem for better desktop reading */
+  max-width: 80rem;  /* Increased for better desktop reading width */
   line-height: 1.8;
   color: var(--color-text);
   font-size: 1.1rem;
@@ -695,7 +695,7 @@
 /* Case pages */
 
 .case-record {
-  max-width: 70rem;  /* Increased from 60rem for better desktop display */
+  max-width: 85rem;  /* Increased for better desktop display width */
   margin: 0 auto;
 }
 
@@ -1014,7 +1014,7 @@
 /* Essay pages */
 
 .essay-record {
-  max-width: 70rem;  /* Increased from 60rem for better desktop display */
+  max-width: 85rem;  /* Increased for better desktop display width */
   margin: 0 auto;
 }
 
@@ -1194,7 +1194,7 @@
 /* Sanctuary inner room (trust) */
 
 .trust-hero {
-  max-width: 70rem;  /* Increased from 60rem for better desktop display */
+  max-width: 85rem;  /* Increased for better desktop display width */
   margin: 0 auto 1.5rem;
   padding: 1.75rem 1.5rem 1.5rem;
   background: rgba(15, 23, 42, 0.7);
@@ -1443,7 +1443,7 @@
 /* Case List Index Styling */
 
 .cases-index {
-  max-width: 70rem;  /* Increased from 60rem for better desktop display */
+  max-width: 85rem;  /* Increased for better desktop display width */
   margin: 0 auto;
   padding: 0 1.25rem;
 }
