@@ -338,11 +338,11 @@ Faith Frontier features a structured case documentation system with two layout o
   - Enhanced docket entry styling
   - Professional print-ready formatting
 
-See `_docs/CASE-ARCHIVE-GUIDE.md` for complete documentation on using the enhanced case system.
+See `_internal/CASE-ARCHIVE-GUIDE.md` for complete documentation on using the enhanced case system.
 
 ## AI-Assisted Analysis
 
-Optional tooling in `scripts/` leverages OpenAI APIs. Configure credentials via `.github/SETUP-OPENAI.md` and review `_docs/QUICKSTART-GENERATE-ANALYSIS.md` plus `_docs/ANALYSIS-SYSTEM.md` before running any automation. Outputs remain subject to the disclaimer and content-license rules.
+Optional tooling in `scripts/` leverages OpenAI APIs. Configure credentials via `.github/SETUP-OPENAI.md` and review `_internal/QUICKSTART-GENERATE-ANALYSIS.md` plus `_internal/ANALYSIS-SYSTEM.md` before running any automation. Outputs remain subject to the disclaimer and content-license rules.
 
 ---
 

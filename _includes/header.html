@@ -1,11 +1,29 @@
-<header class="site-header u-text-accent" role="banner">
-  <div class="site-header-inner container u-flex u-flex-between u-align-center">
 
-    {% assign ff_header_logo_dark = site.logo_main_dark | default: site.logo_main | default: '/assets/img/logo-faithfrontier-dark-bg.svg' %}
-    {% assign ff_header_logo_light = site.logo_main_light | default: '/assets/img/logo-faithfrontier-light-bg.svg' %}
-    {% assign ff_header_logo_png = site.logo_png_full_2000 | default: '/assets/img/faithfrontier-logo-full-2000.png' %}
-    {% assign ff_header_mark_svg = site.logo_mark | default: '/assets/img/faithfrontier-mark.svg' %}
-    {% assign ff_header_mark_png = site.logo_png_mark_512 | default: '/assets/img/faithfrontier-logo-mark-512.png' %}
+<header class="site-header u-text-accent" role="banner" style="background: linear-gradient(90deg, #23272e 0%, #2d313a 100%); border-bottom: 2px solid #d4af37;">
+  <div class="site-header-inner container" style="display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0;">
+    <!-- Left nav group -->
+    <nav class="nav-group nav-group--left" aria-label="Primary navigation left" style="display: flex; gap: 1.5rem;">
+      <a class="nav-link" href="{{ '/story/' | relative_url }}">Our Story</a>
+      <a class="nav-link" href="{{ '/about/' | relative_url }}">About</a>
+      <a class="nav-link" href="{{ '/manifesto/' | relative_url }}">Manifesto</a>
+      <a class="nav-link" href="{{ '/tillerstead-sanctuary-vision/' | relative_url }}">Sanctuary</a>
+    </nav>
+
+    <!-- Centered brand -->
+    <a class="ff-brand ff-brand--center" href="{{ '/' | relative_url }}" aria-label="Faith Frontier Ecclesiastical Trust home" style="display: flex; align-items: center; gap: 0.75rem;">
+      <img src="/assets/img/faithfrontier-mark.svg" alt="" width="36" height="36" style="flex-shrink: 0;" aria-hidden="true" />
+      <span class="ff-logo ff-logo--header ff-logo--dark ff-logo-inline" aria-hidden="false">
+        {% include logo-faithfrontier-header.svg %}
+      </span>
+    </a>
+
+    <!-- Right nav group -->
+    <nav class="nav-group nav-group--right" aria-label="Primary navigation right" style="display: flex; gap: 1.5rem;">
+      <a class="nav-link" href="{{ '/essays/' | relative_url }}">Essays</a>
+      <a class="nav-link" href="{{ '/cases/' | relative_url }}">Cases</a>
+      <a class="nav-link nav-link--highlight" href="{{ '/stewardship-resources/' | relative_url }}" style="color: #d4af37; font-weight: 600;">Stewardship Resources</a>
+      <a class="nav-link" href="{{ '/contact/' | relative_url }}">Contact</a>
+    </nav>
 
     <!-- Mobile nav toggle -->
     <button class="nav-toggle u-ml-md u-bg-accent u-border-none u-radius-sm u-px-xs u-py-xs" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
@@ -13,16 +31,5 @@
       <span class="nav-toggle-bar u-bg-contrast"></span>
       <span class="nav-toggle-bar u-bg-contrast"></span>
     </button>
-
-    <!-- Centered brand (SVG with icon) -->
-    <a class="ff-brand ff-brand--center" href="{{ '/' | relative_url }}" aria-label="Faith Frontier Ecclesiastical Trust home" style="display: flex; align-items: center; gap: 0.75rem;">
-      <img src="/assets/img/faithfrontier-mark.svg" alt="" width="32" height="32" style="flex-shrink: 0;" aria-hidden="true" />
-      <span class="ff-logo ff-logo--header ff-logo--dark ff-logo-inline" aria-hidden="false">
-        {% include logo-faithfrontier-header.svg %}
-      </span>
-    </a>
-
-    {% include nav.component.html %}
-
   </div>
 </header>
