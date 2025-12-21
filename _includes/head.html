@@ -1,12 +1,14 @@
-﻿<meta charset="utf-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <title>
-  Faith Frontier Ecclesiastical Trust
+  {% if page.title %}{{ page.title }} | Faith Frontier Ecclesiastical Trust{% else %}Faith Frontier Ecclesiastical Trust{% endif %}
 </title>
 
-<meta name="description" content="{{ page.description | default: site.description }}">
+<meta name="description" content="{{ page.description | default: site.description | default: 'Faith Frontier Ecclesiastical Trust - Faith-informed transparency for New Jersey. Public records, civic literacy, and property stewardship with humility and accountability.' }}">
 <meta name="author" content="Devon Tyler Barber">
+<meta name="keywords" content="faith frontier, ecclesiastical trust, new jersey, civic literacy, public records, stewardship, accountability, transparency">
 
 <!-- Canonical -->
 <link rel="canonical" href="{{ page.url | absolute_url }}">
@@ -22,29 +24,32 @@
 <meta name="theme-color" content="#020617">
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
+<meta property="og:type" content="{{ page.og_type | default: 'website' }}">
 <meta property="og:site_name" content="Faith Frontier Ecclesiastical Trust">
-<meta property="og:title" content="Faith Frontier Ecclesiastical Trust">
-<meta property="og:description" content="{{ page.description | default: site.description }}">
+<meta property="og:title" content="{% if page.title %}{{ page.title }} | Faith Frontier{% else %}Faith Frontier Ecclesiastical Trust{% endif %}">
+<meta property="og:description" content="{{ page.description | default: site.description | default: 'Faith-informed transparency for New Jersey. Public records, civic literacy, and property stewardship with humility and accountability.' }}">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:locale" content="en_US">
 {% if page.image %}
   <meta property="og:image" content="{{ page.image | absolute_url }}">
+  <meta property="og:image:alt" content="{{ page.title | default: 'Faith Frontier Ecclesiastical Trust' }}">
 {% else %}
-  <meta property="og:image" content="{{ ff_logo_mark_svg | absolute_url }}">
-  <meta property="og:image:type" content="image/svg+xml">
-  <meta property="og:image:width" content="600">
-  <meta property="og:image:height" content="600">
+  <meta property="og:image" content="{{ '/assets/img/og-image.png' | absolute_url }}">
+  <meta property="og:image:alt" content="Faith Frontier Ecclesiastical Trust">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 {% endif %}
 
 <!-- Twitter -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Faith Frontier Ecclesiastical Trust">
-<meta name="twitter:description" content="{{ page.description | default: site.description }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{% if page.title %}{{ page.title }} | Faith Frontier{% else %}Faith Frontier Ecclesiastical Trust{% endif %}">
+<meta name="twitter:description" content="{{ page.description | default: site.description | default: 'Faith-informed transparency for New Jersey. Public records, civic literacy, and property stewardship.' }}">
 {% if page.image %}
   <meta name="twitter:image" content="{{ page.image | absolute_url }}">
 {% else %}
-  <meta name="twitter:image" content="{{ ff_logo_mark_svg | absolute_url }}">
+  <meta name="twitter:image" content="{{ '/assets/img/og-image.png' | absolute_url }}">
 {% endif %}
+<meta name="twitter:image:alt" content="{{ page.title | default: 'Faith Frontier Ecclesiastical Trust' }}">
 
 <!-- Performance hints -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
