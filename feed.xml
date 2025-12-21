@@ -1,0 +1,64 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title | default: "Faith Frontier Ecclesiastical Trust" }}</title>
+    <description>{{ site.description | default: "Faith-informed transparency for New Jersey. Public records, civic literacy, and property stewardship." }}</description>
+    <link>{{ site.url }}</link>
+    <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <generator>Jekyll v{{ jekyll.version }}</generator>
+    <language>en-US</language>
+    
+    <!-- Latest Essays -->
+    {% for essay in site.essays limit:10 %}
+    <item>
+      <title>{{ essay.title | xml_escape }}</title>
+      <description>{{ essay.description | xml_escape | default: essay.excerpt | strip_html | xml_escape | truncate: 300 }}</description>
+      <pubDate>{{ essay.date | date_to_rfc822 }}</pubDate>
+      <link>{{ site.url }}{{ essay.url }}</link>
+      <guid isPermaLink="true">{{ site.url }}{{ essay.url }}</guid>
+      <author>{{ essay.author | default: "Devon Tyler Barber" }}</author>
+      {% if essay.categories %}
+      {% for category in essay.categories %}
+      <category>{{ category | xml_escape }}</category>
+      {% endfor %}
+      {% endif %}
+    </item>
+    {% endfor %}
+    
+    <!-- Latest Cases -->
+    {% for case in site.cases limit:10 %}
+    <item>
+      <title>{{ case.title | xml_escape }}</title>
+      <description>{{ case.description | xml_escape | default: case.excerpt | strip_html | xml_escape | truncate: 300 }}</description>
+      <pubDate>{{ case.date | date_to_rfc822 }}</pubDate>
+      <link>{{ site.url }}{{ case.url }}</link>
+      <guid isPermaLink="true">{{ site.url }}{{ case.url }}</guid>
+      <author>{{ case.author | default: "Faith Frontier" }}</author>
+      <category>Legal Cases</category>
+    </item>
+    {% endfor %}
+    
+    <!-- Latest Blog Posts (if any) -->
+    {% for post in site.posts limit:10 %}
+    <item>
+      <title>{{ post.title | xml_escape }}</title>
+      <description>{{ post.description | xml_escape | default: post.excerpt | strip_html | xml_escape | truncate: 300 }}</description>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      <link>{{ site.url }}{{ post.url }}</link>
+      <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+      <author>{{ post.author | default: "Devon Tyler Barber" }}</author>
+      {% if post.categories %}
+      {% for category in post.categories %}
+      <category>{{ category | xml_escape }}</category>
+      {% endfor %}
+      {% endif %}
+    </item>
+    {% endfor %}
+    
+  </channel>
+</rss>

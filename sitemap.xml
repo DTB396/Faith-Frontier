@@ -1,0 +1,104 @@
+---
+layout: null
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>{{ site.url }}/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Main Pages -->
+  {% for page in site.pages %}
+    {% unless page.sitemap == false or page.url contains '/404' %}
+    <url>
+      <loc>{{ site.url }}{{ page.url }}</loc>
+      {% if page.modified %}
+      <lastmod>{{ page.modified | date_to_xmlschema }}</lastmod>
+      {% elsif page.date %}
+      <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+      {% else %}
+      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      {% endif %}
+      <changefreq>{% if page.url == '/' %}weekly{% else %}monthly{% endif %}</changefreq>
+      <priority>{% if page.url == '/' %}1.0{% elsif page.url contains '/about' or page.url contains '/contact' %}0.9{% else %}0.8{% endif %}</priority>
+    </url>
+    {% endunless %}
+  {% endfor %}
+
+  <!-- Cases -->
+  {% for case in site.cases %}
+    {% unless case.sitemap == false %}
+    <url>
+      <loc>{{ site.url }}{{ case.url }}</loc>
+      {% if case.modified %}
+      <lastmod>{{ case.modified | date_to_xmlschema }}</lastmod>
+      {% elsif case.date %}
+      <lastmod>{{ case.date | date_to_xmlschema }}</lastmod>
+      {% else %}
+      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      {% endif %}
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+    {% endunless %}
+  {% endfor %}
+
+  <!-- Essays -->
+  {% for essay in site.essays %}
+    {% unless essay.sitemap == false %}
+    <url>
+      <loc>{{ site.url }}{{ essay.url }}</loc>
+      {% if essay.modified %}
+      <lastmod>{{ essay.modified | date_to_xmlschema }}</lastmod>
+      {% elsif essay.date %}
+      <lastmod>{{ essay.date | date_to_xmlschema }}</lastmod>
+      {% else %}
+      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      {% endif %}
+      <changefreq>yearly</changefreq>
+      <priority>0.6</priority>
+    </url>
+    {% endunless %}
+  {% endfor %}
+
+  <!-- OPRA Records -->
+  {% for opra in site.opra %}
+    {% unless opra.sitemap == false %}
+    <url>
+      <loc>{{ site.url }}{{ opra.url }}</loc>
+      {% if opra.modified %}
+      <lastmod>{{ opra.modified | date_to_xmlschema }}</lastmod>
+      {% elsif opra.date %}
+      <lastmod>{{ opra.date | date_to_xmlschema }}</lastmod>
+      {% else %}
+      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      {% endif %}
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+    </url>
+    {% endunless %}
+  {% endfor %}
+
+  <!-- Posts (if any) -->
+  {% for post in site.posts %}
+    {% unless post.sitemap == false %}
+    <url>
+      <loc>{{ site.url }}{{ post.url }}</loc>
+      {% if post.modified %}
+      <lastmod>{{ post.modified | date_to_xmlschema }}</lastmod>
+      {% else %}
+      <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+      {% endif %}
+      <changefreq>yearly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    {% endunless %}
+  {% endfor %}
+
+</urlset>

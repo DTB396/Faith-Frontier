@@ -1,0 +1,33 @@
+# Faith Frontier Ecclesiastical Trust - robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://xtx33.github.io/FaithFrontier/sitemap.xml
+
+# Crawl delay (be nice to servers)
+Crawl-delay: 1
+
+# Disallow admin/internal paths
+Disallow: /_internal/
+Disallow: /_site/
+Disallow: /.github/
+Disallow: /.ai/
+Disallow: /scripts/
+Disallow: /tools/
+
+# Allow important paths
+Allow: /cases/
+Allow: /essays/
+Allow: /opra/
+Allow: /about/
+Allow: /contact/
+Allow: /manifesto/
+Allow: /assets/
+
+# Block specific file types from indexing
+Disallow: /*.json$
+Disallow: /*.yml$
+Disallow: /*.yaml$
+Disallow: /*_TEMPLATE.md$

@@ -13,6 +13,9 @@
 <!-- Canonical -->
 <link rel="canonical" href="{{ page.url | absolute_url }}">
 
+<!-- RSS Feed -->
+<link rel="alternate" type="application/rss+xml" title="Faith Frontier RSS Feed" href="{{ '/feed.xml' | absolute_url }}">
+
 {% assign ff_logo_mark_svg = site.logo_mark | default: '/assets/img/faithfrontier-mark.svg' %}
 {% assign ff_favicon_png = '/assets/img/favicon.png' %}
 
@@ -81,4 +84,7 @@
 {% if page.stylesheet %}
 <link rel="stylesheet" href="{{ page.stylesheet | relative_url }}">
 {% endif %}
+
+<!-- Structured Data for SEO -->
+{% include structured-data.html %}
 
