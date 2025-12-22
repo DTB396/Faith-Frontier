@@ -8,24 +8,24 @@
   /* ===== WCAG-COMPLIANT TEXT COLORS ===== */
   
   /* Light backgrounds (stone, cream, white) */
-  --text-on-light: rgba(28, 27, 25, 1);         /* ink-900: 12.65:1 on white */
-  --text-on-light-muted: rgba(58, 56, 52, 1);   /* ink-700: 7.88:1 on white */
-  --link-on-light: rgba(16, 92, 74, 1);         /* emerald-600: 4.52:1 on white */
-  --link-on-light-hover: rgba(184, 138, 57, 1); /* brass-600: 4.72:1 on white */
+  --text-on-light: rgba(28, 27, 25, 1);         /* ink-900: 17.21:1 on white */
+  --text-on-light-muted: rgba(58, 56, 52, 1);   /* ink-700: 11.70:1 on white */
+  --link-on-light: rgba(16, 92, 74, 1);         /* emerald-700: 7.92:1 on white */
+  --link-on-light-hover: rgba(130, 90, 30, 1);  /* brass-700: 6.12:1 on white */
   
   /* Dark backgrounds (navy, ink) */
-  --text-on-dark: rgba(249, 250, 251, 1);       /* cream-50: 17.51:1 on navy-950 */
-  --text-on-dark-muted: rgba(203, 213, 225, 1); /* muted-300: 10.82:1 on navy-950 */
-  --link-on-dark: rgba(36, 181, 138, 1);        /* emerald-400: 7.42:1 on navy-950 */
-  --link-on-dark-hover: rgba(212, 165, 116, 1); /* brass-500: 6.94:1 on navy-950 */
+  --text-on-dark: rgba(249, 250, 251, 1);       /* cream-50: 18.59:1 on navy-950 */
+  --text-on-dark-muted: rgba(203, 213, 225, 1); /* muted-300: 13.09:1 on navy-950 */
+  --link-on-dark: rgba(110, 231, 183, 1);       /* emerald-300: 12.75:1 on navy-950 */
+  --link-on-dark-hover: rgba(212, 165, 116, 1); /* brass-500: 8.73:1 on navy-950 */
   
   /* Emerald backgrounds */
-  --text-on-emerald: rgba(249, 250, 251, 1);    /* cream-50: 4.75:1 on emerald-600 */
-  --link-on-emerald: rgba(254, 243, 199, 1);    /* cream-100: 5.65:1 on emerald-600 */
+  --text-on-emerald: rgba(249, 250, 251, 1);    /* cream-50: 7.58:1 on emerald-600 */
+  --link-on-emerald: rgba(254, 243, 199, 1);    /* cream-100: 7.11:1 on emerald-600 */
   
   /* Brass backgrounds */
-  --text-on-brass: rgba(28, 27, 25, 1);         /* ink-900: 5.21:1 on brass-500 */
-  --link-on-brass: rgba(10, 27, 50, 1);         /* navy-900: 6.18:1 on brass-500 */
+  --text-on-brass: rgba(28, 27, 25, 1);         /* ink-900: 7.73:1 on brass-500 */
+  --link-on-brass: rgba(10, 27, 50, 1);         /* navy-900: 7.76:1 on brass-500 */
   
   
   /* ===== ADAPTIVE COLOR PROPERTIES ===== */

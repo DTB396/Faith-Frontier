@@ -164,9 +164,9 @@
 }
 
 .badge--warning {
-  background: var(--brass-600);
+  background: var(--brass-700);
   color: var(--text-on-brass);
-  border-color: var(--brass-600);
+  border-color: var(--brass-700);
 }
 
 .badge--muted {
@@ -197,7 +197,7 @@
 }
 
 .link--secondary:hover {
-  color: var(--brass-600);
+  color: var(--brass-700);
 }
 
 
@@ -418,7 +418,7 @@
 }
 
 .notice--warning {
-  border-left-color: var(--brass-600);
+  border-left-color: var(--brass-700);
   background: rgba(212, 165, 116, 0.1);
   color: var(--brass-500);
 }

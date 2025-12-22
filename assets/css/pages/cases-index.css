@@ -12,7 +12,7 @@
  * 
  * Brand Tokens Used:
  * - --emerald-600, --emerald-500: Primary brand
- * - --brass-500, --brass-600: Secondary brand
+ * - --brass-500, --brass-700: Secondary brand
  * - --navy-950, --navy-900: Dark backgrounds
  * - --cream-50: Light text on dark
  * - --muted-300, --muted-400: Muted text
@@ -129,8 +129,8 @@
 }
 
 .btn-primary:hover {
-  background: var(--brass-600);
-  border-color: var(--brass-600);
+  background: var(--brass-700);
+  border-color: var(--brass-700);
   box-shadow: 0 4px 16px rgba(212, 165, 116, 0.4);
 }
 
@@ -361,8 +361,8 @@
 }
 
 .view-case-btn:hover {
-  background: var(--brass-600);
-  border-color: var(--brass-600);
+  background: var(--brass-700);
+  border-color: var(--brass-700);
   transform: translateY(-2px);
   box-shadow: 0 4px 16px rgba(212, 165, 116, 0.3);
   color: var(--text-on-brass);
@@ -605,7 +605,7 @@
 }
 
 .opra-btn:hover {
-  background: var(--brass-600);
+  background: var(--brass-700);
   transform: translateY(-2px);
   box-shadow: 0 4px 16px rgba(212, 165, 116, 0.3);
 }

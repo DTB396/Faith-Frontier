@@ -24,15 +24,16 @@
   --emerald-400: rgba(36, 181, 138, 1);
   
   /* Brass/Gold (Secondary brand) */
-  --brass-600: rgba(184, 138, 57, 1);
+  --brass-700: rgba(130, 90, 30, 1);
+  --brass-700: rgba(130, 90, 30, 1);
   --brass-500: rgba(212, 165, 116, 1);
-  --brass-400: rgba(160, 122, 50, 1);
+  --brass-700: rgba(130, 90, 30, 1);
   
   /* Brass opacity variants */
-  --brass-alpha-35: rgba(184, 138, 57, 0.35);
+  --brass-alpha-35: rgba(130, 90, 30, 0.35);
   --brass-alpha-30: rgba(212, 165, 116, 0.30);
   --brass-alpha-20: rgba(212, 165, 116, 0.20);
-  --brass-alpha-18: rgba(184, 138, 57, 0.18);
+  --brass-alpha-18: rgba(130, 90, 30, 0.18);
   --brass-alpha-10: rgba(212, 165, 116, 0.10);
   --brass-alpha-05: rgba(212, 165, 116, 0.05);
   --brass-alpha-02: rgba(212, 165, 116, 0.02);
@@ -68,6 +69,7 @@
   
   /* Emerald variants */
   --emerald-700: rgba(16, 92, 74, 1);
+  --emerald-300: rgba(110, 231, 183, 1);
   
   /* Cream/Highlight */
   --cream-100: rgba(254, 243, 199, 1);
@@ -101,9 +103,20 @@
   /* Accents */
   --ff-primary: var(--emerald-500);
   --ff-primary-light: var(--emerald-400);
+  --ff-primary-dark: var(--emerald-700);
   --ff-secondary: var(--brass-500);
-  --ff-secondary-dark: var(--brass-400);
+  --ff-secondary-dark: var(--brass-700);
   --ff-highlight: var(--cream-100);
+  
+  /* Accessible color pairings */
+  --text-on-light: var(--ink-900);          /* 17.21:1 on white */
+  --text-on-dark: var(--cream-50);          /* 18.59:1 on navy950 */
+  --text-muted-on-light: var(--ink-700);    /* 11.70:1 on white */
+  --text-muted-on-dark: var(--muted-300);   /* 13.09:1 on navy950 */
+  --accent-on-light: var(--emerald-700);    /* 7.92:1 on white */
+  --accent-on-dark: var(--emerald-300);     /* 12.75:1 on navy950 */
+  --secondary-on-light: var(--brass-700);   /* 6.12:1 on white */
+  --secondary-on-dark: var(--brass-500);    /* 8.73:1 on navy950 */
   
   /* Legacy aliases (for backward compatibility) */
   --color-surface: var(--ff-surface);
@@ -118,7 +131,7 @@
   --ts-emerald: var(--emerald-500);
   --ts-emerald-light: var(--emerald-400);
   --ts-brass: var(--brass-500);
-  --ts-brass-muted: var(--brass-400);
+  --ts-brass-muted: var(--brass-700);
   --ts-navy: var(--navy-950);
   --ts-navy-soft: var(--navy-900);
   --ff-ink: var(--cream-50);
@@ -250,8 +263,10 @@
 [data-theme="light"] {
   --ff-surface: var(--stone-100);
   --ff-surface-alt: var(--stone-50);
-  --ff-text: var(--ink-900);
-  --ff-text-muted: var(--ink-700);
+  --ff-text: var(--ink-900);                /* ✅ 17.21:1 contrast */
+  --ff-text-muted: var(--ink-700);          /* ✅ 11.70:1 contrast */
+  --ff-primary: var(--emerald-700);         /* ✅ 7.92:1 contrast */
+  --ff-secondary: var(--brass-700);         /* ✅ 6.12:1 contrast */
   --ff-highlight: var(--cream-50);
   
   --color-surface: var(--stone-100);
@@ -259,4 +274,13 @@
   --color-text: var(--ink-900);
   --color-muted: var(--ink-700);
   --color-highlight: var(--cream-50);
+}
+
+/* ===== DARK MODE OVERRIDES ===== */
+[data-theme="dark"],
+body:not(.light-mode):not(.ff-home) {
+  --ff-text: var(--cream-50);               /* ✅ 18.59:1 contrast */
+  --ff-text-muted: var(--muted-300);        /* ✅ 13.09:1 contrast */
+  --ff-primary: var(--emerald-300);         /* ✅ 12.75:1 contrast */
+  --ff-secondary: var(--brass-500);         /* ✅ 8.73:1 contrast */
 }

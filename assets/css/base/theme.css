@@ -341,8 +341,8 @@
 }
 
 .nav-group > a {
-  background: rgba(184, 138, 57, 0.12);
-  border-color: rgba(184, 138, 57, 0.3);
+  background: rgba(130, 90, 30, 0.12);
+  border-color: rgba(130, 90, 30, 0.3);
 }
 
 .nav-sublist {
@@ -351,7 +351,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
-  border-left: 2px solid rgba(184, 138, 57, 0.35);
+  border-left: 2px solid rgba(130, 90, 30, 0.35);
 }
 
 .nav-sublist a {
@@ -367,8 +367,8 @@
   opacity: 1;
   color: var(--accent-brass);
   text-decoration: none;
-  background: rgba(184, 138, 57, 0.12);
-  border-color: rgba(184, 138, 57, 0.35);
+  background: rgba(130, 90, 30, 0.12);
+  border-color: rgba(130, 90, 30, 0.35);
   outline: none;
 }
 
@@ -381,8 +381,8 @@
 /* Active page state */
 .site-nav a[aria-current="page"] {
   color: var(--accent-brass);
-  background: rgba(184, 138, 57, 0.12);
-  border-color: rgba(184, 138, 57, 0.35);
+  background: rgba(130, 90, 30, 0.12);
+  border-color: rgba(130, 90, 30, 0.35);
 }
 
 .site-nav a:active {
@@ -411,7 +411,7 @@
 
 /* Flat menu polish (no submenus) */
 .site-nav.is-open .nav-list > li + li {
-  border-top: 1px solid rgba(184, 138, 57, 0.18);
+  border-top: 1px solid rgba(130, 90, 30, 0.18);
 }
 .site-nav.is-open .nav-list > li a {
   padding: 0.85rem 0.9rem;
@@ -424,7 +424,7 @@
   justify-content: space-between;
   margin: 0 0 0.5rem 0;
   padding: 0.25rem 0.25rem 0.5rem;
-  border-bottom: 1px solid rgba(184, 138, 57, 0.25);
+  border-bottom: 1px solid rgba(130, 90, 30, 0.25);
 }
 .nav-drawer-brand {
   flex: 1;
@@ -447,7 +447,7 @@
 }
 .nav-close {
   background: transparent;
-  border: 1px solid rgba(184, 138, 57, 0.4);
+  border: 1px solid rgba(130, 90, 30, 0.4);
   color: var(--cream-text);
   width: 36px;
   height: 36px;
@@ -457,7 +457,7 @@
   cursor: pointer;
 }
 .nav-close:hover {
-  background: rgba(184, 138, 57, 0.12);
+  background: rgba(130, 90, 30, 0.12);
 }
 
 @keyframes slideInRight {
@@ -531,7 +531,7 @@
 
   .site-nav a:hover,
   .site-nav a:focus {
-    background: rgba(184, 138, 57, 0.15);
+    background: rgba(130, 90, 30, 0.15);
   }
 
   /* Highlight link styling */
