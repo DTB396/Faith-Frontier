@@ -16,14 +16,15 @@ hero_secondary_url: "/opra/"
 hero_secondary_label: "OPRA Records"
 
 hero_highlights:
-  - label: "Due process & clarity"
-    text: "Plain-language documentation to help residents understand procedures, seek counsel, and rely on lawful process with dignity."
-  - label: "Lawful stewardship"
-    text: "Property and housing work pursued within zoning, licensing, inspection, and tax compliance—no shortcuts."
-  - label: "Public accountability"
-    text: "Open records, clear timelines, and documented corrections—inviting oversight while maintaining respectful boundaries."
-
+  - label: "Due Process & Clarity"
+    text: "Plain-language documentation helps residents understand legal procedures, seek counsel, and rely on lawful processes with dignity."
+  - label: "Lawful Stewardship"
+    text: "Property initiatives respect zoning, licensing, and tax compliance—pursuing housing solutions within legal boundaries."
+  - label: "Transparent Accountability"
+    text: "Every action is documented openly, inviting oversight and correction while honoring both faith principles and civic obligations."
 ---
+
+<!-- markdownlint-disable MD033 -->
 
 {% include premium-hero.html %}
 <!-- Center-aligned brand -->
