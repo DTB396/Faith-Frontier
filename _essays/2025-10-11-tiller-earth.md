@@ -257,7 +257,7 @@ description: "Selected writings originally published at Tiller.Earth, preserved 
             <footer style="margin-top:14px;color:var(--color-text-muted)">
               — <strong>Devon Tyler Barber • <em>Tillerstead LLC · Faith Frontier</em></strong><br>
               <small style="opacity:.9">Statement of values and intent based on lived experience and faith convictions.</small>
-</footer>
+</strong></footer>
 </div>
 </div>
 </details>

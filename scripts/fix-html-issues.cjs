@@ -73,7 +73,7 @@ function replaceHardcodedColors(content) {
   return updated;
 }
 
-function fixFile(filePath, fileixes) {
+function fixFile(filePath, fileFixes) {
   const fullPath = path.join(process.cwd(), filePath);
   
   if (!fs.existsSync(fullPath)) {
