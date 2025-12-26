@@ -8,15 +8,15 @@
 
 /* Import theme modules */
 @import url('variables.css');
-@import url('adaptive-contrast.css');
+@import url('../components/adaptive-contrast.css');
 @import url('base.css');
-@import url('layout.css');
-@import url('components.css');
-@import url('cases.css');
-@import url('premium-header.css');
-@import url('premium-hero.css');
-@import url('theme-toggle.css');
-@import url('page-transitions.css');
+@import url('../layouts/layout.css');
+@import url('../components/components.css');
+@import url('../pages/cases.css');
+@import url('../components/premium-header.css');
+@import url('../components/premium-hero.css');
+@import url('../components/theme-toggle.css');
+@import url('../layouts/page-transitions.css');
 
 /* ======================================
    Header / Navigation / Logo
