@@ -96,41 +96,45 @@
                 </div>
 
                 <div class="top-medications">
-                    <h4>Most Over-Prescribed Medications</h4>
-                    <ul class="medication-list">
+                    <h4>💊 Most Over-Prescribed Medications</h4>
+                    <div class="medication-list">
                         ${stateData.top_medications.map(med => {
                             const medInfo = getMedicationInfo(med);
                             return `
-                                <li class="medication-item">
+                                <div class="medication-item">
                                     <strong>${escapeHtml(med)}</strong>
                                     ${medInfo ? `
                                         <div class="medication-details">
-                                            <p class="med-harm">${escapeHtml(medInfo.harm)}</p>
-                                            <p class="med-nature"><strong>Natural Origin:</strong> ${escapeHtml(medInfo.nature_lineage)}</p>
+                                            <div class="med-section med-harm">
+                                                <strong>⚠️ Health Impact:</strong> ${escapeHtml(medInfo.harm)}
+                                            </div>
+                                            <div class="med-section med-nature">
+                                                <strong>🌿 Natural Origin:</strong> ${escapeHtml(medInfo.nature_lineage)}
+                                            </div>
                                             ${medInfo.supportive_plants ? `
-                                                <p class="med-alternatives">
-                                                    <strong>Garden Alternatives:</strong> 
+                                                <div class="med-section med-alternatives">
+                                                    <strong>🌱 Garden Alternatives:</strong> 
                                                     ${medInfo.supportive_plants.map(p => escapeHtml(p)).join(', ')}
-                                                </p>
+                                                </div>
                                             ` : ''}
                                         </div>
                                     ` : ''}
-                                </li>
+                                </div>
                             `;
                         }).join('')}
-                    </ul>
+                    </div>
                 </div>
 
                 <div class="featured-plants-section">
-                    <h4>What You Can Garden (Zone ${escapeHtml(stateData.zone)})</h4>
-                    <ul class="featured-plants-list">
+                    <h4>🌱 Plants You Can Garden in Zone ${escapeHtml(stateData.zone)}</h4>
+                    <div class="featured-plants-grid">
                         ${stateData.featured_plants.map(plant => `
-                            <li class="plant-item">
+                            <div class="plant-item">
                                 <span class="plant-icon">🌿</span>
-                                ${escapeHtml(plant)}
-                            </li>
+                                <span class="plant-item-text">${escapeHtml(plant)}</span>
+                            </div>
                         `).join('')}
-                    </ul>
+                    </div>
                 </div>
 
                 <div class="state-context">
@@ -427,21 +431,16 @@
     if (!selected.state) {
         resultsMeta.innerHTML = `
             <div class="welcome-message">
-                <h3>Interactive US Medication & Gardening Guide</h3>
-                <p><strong>Click any state</strong> to see:</p>
-                <ul>
-                    <li>Most over-prescribed medications in that state</li>
-                    <li>Natural origins of those medications</li>
-                    <li>Plants you can garden as alternatives</li>
-                    <li>Your hardiness zone and featured crops</li>
+                <h3>👋 Welcome to the Interactive US Medication & Gardening Guide</h3>
+                <p><strong>Click any state on the map above</strong> to discover:</p>
+                <ul class="welcome-list">
+                    <li>Which medications are most overprescribed in that state</li>
+                    <li>The natural botanical origins of those medications</li>
+                    <li>Plants you can garden as healthy alternatives</li>
+                    <li>Your local hardiness zone and featured crops</li>
+                    <li>Healthcare context and opportunities for improvement</li>
                 </ul>
-                <p class="legend-title"><strong>Map Colors:</strong></p>
-                <ul class="map-legend">
-                    <li><span class="legend-color" style="background: #10b981;"></span> Lower Rx rate (&lt;60%)</li>
-                    <li><span class="legend-color" style="background: #fbbf24;"></span> Moderate (60-65%)</li>
-                    <li><span class="legend-color" style="background: #f59e0b;"></span> High (66-67%)</li>
-                    <li><span class="legend-color" style="background: #dc2626;"></span> Crisis Level (68%+)</li>
-                </ul>
+                <p style="margin-top: 1.5rem;"><strong>All data verified by:</strong> CDC, SAMHSA, Kaiser Family Foundation, and USDA</p>
             </div>
         `;
     }

@@ -26,7 +26,7 @@ faith:
     amazon_url: "https://amzn.to/3MNWTfF"
     category: faith
     tags: [scripture, reformation, geneva-bible, theology]
-    date_added: 2025-12-20
+    date_added: "2025-12-20"
     personal_note: "This is the Word I read and study. The marginal notes connect Scripture to lawful governance and personal stewardship. It's not just history—it's living theology."
 
   - id: geneva-bible-1560-complete-apocrypha
@@ -35,7 +35,7 @@ faith:
     amazon_url: "https://amzn.to/4jdXLGK"
     category: faith
     tags: [scripture, apocrypha, reformation, complete-canon]
-    date_added: 2025-12-20
+    date_added: "2025-12-20"
     personal_note: "For serious study. This includes texts often overlooked but historically significant for understanding the context of Scripture and early church decisions."
 
 # ============================================================================
@@ -58,7 +58,7 @@ health:
     amazon_url: "https://amzn.to/4pIvlXH"
     category: health
     tags: [immune-support, colloidal-silver, wellness, glass-bottle, 30ppm]
-    date_added: 2025-12-20
+    date_added: "2025-12-20"
     personal_note: "Keep this on hand. Silver has antimicrobial properties known since ancient times. I use it at first sign of trouble. Glass bottle matters—no leaching. Remember: I'm not a doctor."
 
   - id: ormus-monoatomic-gold
@@ -67,7 +67,7 @@ health:
     amazon_url: "https://amzn.to/4athv6U"
     category: health
     tags: [ormus, minerals, trace-minerals, alchemy, monoatomic-gold]
-    date_added: 2025-12-20
+    date_added: "2025-12-20"
     personal_note: "This is esoteric but real. Monoatomic elements work differently than metallic form. I take this for mental clarity and spiritual grounding. Results speak for themselves."
 
   - id: sovereign-copper-hydrosol
@@ -76,7 +76,7 @@ health:
     amazon_url: "https://amzn.to/3LcS7YD"
     category: health
     tags: [copper, colloidal-copper, immune-support, bioavailable, liquid-supplement]
-    date_added: 2025-12-20
+    date_added: "2025-12-20"
     personal_note: "Copper is criminally overlooked. Essential for collagen, iron absorption, and countless enzymatic processes. This is bioavailable form your body can actually use."
 
   - id: sovereign-silver-hydrosol
@@ -85,7 +85,7 @@ health:
     amazon_url: "https://amzn.to/3Y2BKRp"
     category: health
     tags: [colloidal-silver, immune-support, sovereign-silver, 10ppm, value-size]
-    date_added: 2025-12-20
+    date_added: "2025-12-20"
     personal_note: "Another trusted silver source. 10 ppm is gentler for daily maintenance, 30 ppm for acute situations. Both have their place in the medicine cabinet."
 
   - id: shilajit-pure-himalayan
@@ -94,7 +94,7 @@ health:
     amazon_url: "https://amzn.to/4p3NHkM"
     category: health
     tags: [shilajit, fulvic-acid, trace-minerals, ayurvedic, adaptogen, energy]
-    date_added: 2025-12-20
+    date_added: "2025-12-20"
     personal_note: "Shilajit is ancient medicine—literally. Formed from centuries of plant decomposition in high mountains. Contains nearly everything your body needs. Tastes terrible, works wonderfully."
 
   - id: organic-irish-moss
@@ -103,7 +103,7 @@ health:
     amazon_url: "https://amzn.to/4qo7htd"
     category: health
     tags: [sea-moss, irish-moss, minerals, organic, iodine, glass-bottle]
-    date_added: 2025-12-20
+    date_added: "2025-12-20"
     personal_note: "Sea moss is nutritional insurance. Iodine for thyroid, minerals for everything else. I make gel weekly and add to smoothies. Your body knows what to do with it."
 
   - id: pure-copper-water-bottle
@@ -112,7 +112,7 @@ health:
     amazon_url: "https://amzn.to/495Apyn"
     category: health
     tags: [copper-vessel, ayurvedic, water-bottle, antimicrobial, handcrafted, 34oz]
-    date_added: 2025-12-20
+    date_added: "2025-12-20"
     personal_note: "Water stored in copper takes on antimicrobial properties naturally. Ancient practice with modern relevance. I drink from copper daily—your body needs it."
 
   - id: hammered-copper-tumblers
@@ -121,7 +121,7 @@ health:
     amazon_url: "https://amzn.to/3NbHdTx"
     category: health
     tags: [copper-vessel, tumblers, ayurvedic, unlined, hammered, set-of-2]
-    date_added: 2025-12-20
+    date_added: "2025-12-20"
     personal_note: "Unlined copper is key—you want the copper contact. These are travel-size and perfect for guests. Copper naturally purifies water and adds trace minerals."
 
   - id: tongkat-ali-fadogia
@@ -130,7 +130,7 @@ health:
     amazon_url: "https://amzn.to/4sdc5Dq"
     category: health
     tags: [tongkat-ali, fadogia, testosterone, male-health, nitric-oxide, longjack]
-    date_added: 2025-12-20
+    date_added: "2025-12-20"
     personal_note: "Men: testosterone matters. These herbs have traditional use and modern research backing them. I cycle this—works best with exercise and proper diet, not as magic pill."
 
   - id: youtheory-ashwagandha
@@ -139,7 +139,7 @@ health:
     amazon_url: "https://amzn.to/4qiycq7"
     category: health
     tags: [ashwagandha, adaptogen, stress-support, cortisol, ayurvedic, vegetarian]
-    date_added: 2025-12-20
+    date_added: "2025-12-20"
     personal_note: "Adaptogens help your body adapt to stress—it's in the name. Ashwagandha is one of the best studied. I take this during high-stress seasons. It doesn't sedate, it normalizes."
 
   - id: naturealm-sacred-7-mushrooms
@@ -148,7 +148,7 @@ health:
     amazon_url: "https://amzn.to/4pPmTGj"
     category: health
     tags: [mushrooms, lions-mane, reishi, chaga, nootropic, immune-support, fruiting-body]
-    date_added: 2025-12-20
+    date_added: "2025-12-20"
     personal_note: "Mushrooms are medicine. Fruiting body matters—that's where the real compounds are. I add this to morning coffee for immune and cognitive support. Ancient wisdom, modern extraction."
 
   - id: ancient-nutrition-mushroom-tablets
@@ -157,7 +157,7 @@ health:
     amazon_url: "https://amzn.to/459jkCg"
     category: health
     tags: [mushrooms, immune-support, stress-response, organic, paleo, keto, tablets]
-    date_added: 2025-12-20
+    date_added: "2025-12-20"
     personal_note: "Another quality mushroom option, this time in tablet form for convenience. Ancient Nutrition does solid work with traditional ingredients and modern quality control."
 
 # ============================================================================
@@ -170,7 +170,7 @@ homestead:
     amazon_url: "https://amzn.to/3Y6bJk4"
     category: homestead
     tags: [bedding, linen, cotton-blend, breathable, home-goods, natural-fibers]
-    date_added: 2025-12-20
+    date_added: "2025-12-20"
     personal_note: "Natural materials for better rest. These get softer with every wash and regulate temperature naturally—important for seasonal living."
 
   - id: grounding-mat-bed
@@ -179,7 +179,7 @@ homestead:
     amazon_url: "https://amzn.to/3YDI1Db"
     category: homestead
     tags: [grounding, earthing, sleep, wellness, pu-leather, bed-pad]
-    date_added: 2025-12-20
+    date_added: "2025-12-20"
     personal_note: "We've lost connection to the earth's natural field. This is one way to restore that contact indoors. I notice better rest when grounded."
 
   - id: amazon-basics-cast-iron-set
@@ -188,7 +188,7 @@ homestead:
     amazon_url: "https://amzn.to/4s9CrGb"
     category: homestead
     tags: [cookware, cast-iron, non-toxic, pre-seasoned, kitchen-essentials, durable]
-    date_added: 2025-12-20
+    date_added: "2025-12-20"
     personal_note: "Real cookware that lasts. No toxic coatings, no planned obsolescence. Season it well and pass it down to your children."
 
 # ============================================================================
@@ -206,7 +206,7 @@ gold:
     amazon_url: "https://amzn.to/4j80GRb"
     category: gold
     tags: [gold, jewelry, 18k, italian, rope-chain, wearable-wealth]
-    date_added: 2025-12-20
+    date_added: "2025-12-20"
     personal_note: "Wearable stewardship. Gold doesn't decay, can't be debased by central banks, and travels with you. Biblical wisdom for uncertain times."
 
   - id: ross-simons-14k-rope-chain
@@ -215,7 +215,7 @@ gold:
     amazon_url: "https://amzn.to/3Yq85St"
     category: gold
     tags: [gold, jewelry, 14k, rope-chain, ross-simons, wearable-wealth]
-    date_added: 2025-12-20
+    date_added: "2025-12-20"
     personal_note: "14k is more practical for daily wear—harder alloy, still real gold. A hedge you can wear and pass down."
 
 # ============================================================================
@@ -261,4 +261,5 @@ _metadata:
   purpose: "Support Faith Frontier's HTML development fund through curated product recommendations"
   disclosure: "As an Amazon Associate, Faith Frontier earns from qualifying purchases at no extra cost to you"
   disclaimer: "These are personal recommendations, not professional advice. Always consult qualified professionals for health guidance"
+
 
