@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "verify": "npm run lint && npm run build && npm test",
     "lint": "eslint \"assets/js/**/*.js\" \"worker/**/*.js\" \"scripts/verify-frontend-js.js\" \"eslint.config.js\"",
     "lint:fix": "eslint \"assets/js/**/*.js\" \"worker/**/*.js\" \"scripts/verify-frontend-js.js\" \"eslint.config.js\" --fix",
     "lint:content": "node scripts/check-markdown-css.js",
