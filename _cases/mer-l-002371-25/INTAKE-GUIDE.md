@@ -33,26 +33,40 @@ faithfrontier/
 
 ## 🚀 Automated PDF Intake
 
-### Method 1: Using _inbox (Recommended)
+### Method 1: Using _inbox Subdirectory (Recommended)
 
-1. **Place PDFs in `_inbox/` directory:**
-   ```
-   _inbox/
-   ├── MER-L-002371-25_new-filing.pdf
-   └── 20251228-motion-to-dismiss.pdf
-   ```
-
-2. **Run intake script:**
+1. **Place PDFs in `_inbox/mer-l-002371-25/` directory:**
    ```bash
-   node scripts/docket-intake.js
+   cp ~/Downloads/*.pdf _inbox/mer-l-002371-25/
    ```
 
-3. **What happens automatically:**
-   - Script detects "MER-L-002371-25" in filename or prompts for docket number
-   - PDF moved to `cases/mer-l-002371-25/filings/`
-   - Entry added to `_data/docket/mer-l-002371-25.yml`
-   - Date extracted from filename or metadata
-   - File renamed to standard format: `YYYYMMDD-description.pdf`
+2. **Commit and push to trigger GitHub Actions:**
+   ```bash
+   git add _inbox/mer-l-002371-25/
+   git commit -m "intake: MER-L-002371-25 new filings"
+   git push
+   ```
+
+3. **What happens automatically (via GitHub Actions):**
+   - Script detects PDFs in case inbox directory
+   - PDFs moved to `cases/mer-l-002371-25/filings/`
+   - Entries added to `_data/docket/mer-l-002371-25.yml`
+   - Files renamed to standard format: `YYYYMMDD-Type_description.pdf`
+   - Pull request created for your review
+   - You merge the PR when ready
+
+### Method 2: Local Intake (For Testing)
+
+```bash
+# Place PDF in inbox
+cp document.pdf _inbox/mer-l-002371-25/
+
+# Run intake script locally
+node scripts/docket-intake.js
+
+# Commit the results
+git add . && git commit -m "intake: process new filing" && git push
+```
 
 ---
 
@@ -137,52 +151,45 @@ bundle exec jekyll build
 
 ## 🎯 Intake Workflow Examples
 
-### Example 1: Batch PDF Upload
+### Example 1: Batch PDF Upload (Production Workflow)
 
 ```bash
-# Place multiple PDFs in inbox with docket number in filename
-cp ~/Downloads/*.pdf _inbox/
+# Step 1: Copy multiple PDFs to case inbox
+cp ~/Downloads/*.pdf _inbox/mer-l-002371-25/
 
-# Rename to include docket identifier
-for file in _inbox/*.pdf; do
-  mv "$file" "_inbox/MER-L-002371-25_$(basename $file)"
-done
+# Step 2: Commit and push to GitHub
+git add _inbox/mer-l-002371-25/
+git commit -m "intake: MER-L-002371-25 batch upload - Dec filings"
+git push
 
-# Run intake
-node scripts/docket-intake.js
-
-# All files will be processed automatically
+# Step 3: GitHub Actions processes automatically
+# - Creates PR with processed files
+# - You review and merge
 ```
 
-### Example 2: Single PDF with Date
+### Example 2: Single PDF with Quick Intake
 
 ```bash
-# Copy to inbox with date in filename
-cp new-motion.pdf _inbox/20251228-MER-L-002371-25-motion.pdf
+# Copy to case inbox
+cp new-motion.pdf _inbox/mer-l-002371-25/20251228-motion-to-dismiss.pdf
 
-# Run intake
-node scripts/docket-intake.js
+# Push to GitHub
+git add _inbox/mer-l-002371-25/ && git commit -m "intake: motion to dismiss" && git push
 
-# Script will:
-# - Extract date: 2025-12-28
-# - Route to: mer-l-002371-25
-# - Create entry with proper metadata
+# GitHub Actions handles the rest
 ```
 
-### Example 3: Interactive Intake
+### Example 3: Local Testing (Before Pushing)
 
 ```bash
-# Copy PDF without metadata
-cp document.pdf _inbox/
+# Copy PDF to inbox
+cp document.pdf _inbox/mer-l-002371-25/
 
-# Run intake (will prompt for details)
+# Run intake locally to test
 node scripts/docket-intake.js
 
-# Follow prompts:
-# - Enter docket number: MER-L-002371-25
-# - Enter date: 2025-12-28
-# - Enter type: Motion
-# - Enter title: Motion to Dismiss
+# If looks good, commit
+git add . && git commit -m "intake: new filing" && git push
 ```
 
 ---
