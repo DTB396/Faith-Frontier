@@ -126,14 +126,6 @@ If you add a `catalog_sections:` block in your `associates.yml`, it will render 
 > _Optional enhancement:_ Add `catalog_sections:` to `site.data.associates` to drive the catalog from one data file.
 {% endif %}
 
----
-
-# Curated Product Database
-
-{% if db._config.rendering.show_disclosure %}
-> **Affiliate disclosure (repeat):** {{ db._metadata.disclosure_short }}
-{% endif %}
-
 catalog_sections:
   - id: soil
     title: "Soil Health & Monitoring"
@@ -152,6 +144,15 @@ catalog_sections:
         url: "https://www.amazon.com/s?k=compost+thermometer+long+probe&tag=xtx33-20"
       - label: "Outdoor compost bins"
         url: "https://www.amazon.com/s?k=outdoor+compost+bin&tag=xtx33-20"
+
+
+---
+
+# Curated Product Database
+
+{% if db._config.rendering.show_disclosure %}
+> **Affiliate disclosure (repeat):** {{ db._metadata.disclosure_short }}
+{% endif %}
 
 ---
 
