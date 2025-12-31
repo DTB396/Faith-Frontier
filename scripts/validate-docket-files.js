@@ -101,7 +101,7 @@ const validateYaml = (filePath) => {
           if (isNaN(entry.date.getTime())) {
             log.error(`Entry ${entryNum} has invalid date: ${entry.date}`);
             entryValid = false;
-            // Skip further date validation for this entry
+            // dateStr remains undefined, so regex validation below will be skipped
           } else {
             // Convert Date object to YYYY-MM-DD string for validation
             const year = entry.date.getFullYear();
