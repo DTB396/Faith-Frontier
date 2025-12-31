@@ -13,7 +13,7 @@ stylesheet: /assets/css/home.css
 
   <!-- 1. PREMIUM HERO (TOP ANCHOR, VISUAL IDENTITY) -->
   {% include premium-hero.html %}
-
+{% include faith-conscience-banner.html %}
   <!-- 2. MAIN CONTENT HERO (YOUR EXISTING HERO GRID) -->
   <!-- This stays exactly as you wrote it -->
   {% include hero-panel.html %}
