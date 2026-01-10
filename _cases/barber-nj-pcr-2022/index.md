@@ -1,4 +1,3 @@
----
 
 layout: case
 title: Barber PCR (2022) – State v. Barber (Hardemon matters)
@@ -10,21 +9,20 @@ venue: Atlantic County
 case_type: Post-Conviction Relief (R. 3:22)
 role: Petitioner
 dockets:
-
-* ATL-22-002292
-* ATL-22-002313
-  primary_docket: ATL-22-002292
-  status: pending
-  filed_date: 2025-10-26
-  judge: null
-  tags:
-* post-conviction-relief
-* pcr
-* criminal
-* due-process
-* ineffective-assistance
-  assets_dir: /cases/barber-nj-pcr-2022/filings/
-  overview: >
+  - docket: ATL-22-002292
+    primary_docket: ATL-22-002292
+    status: pending
+    filed_date: 2025-10-26
+    judge: null
+  - docket: ATL-22-002313
+tags:
+  - post-conviction-relief
+  - pcr
+  - criminal
+  - due-process
+  - ineffective-assistance
+assets_dir: /cases/barber-nj-pcr-2022/filings/
+overview: >
   Consolidated post-conviction relief proceedings challenging a 2022 conviction and
   related proceedings. The petition asserts violations of due process, ineffective
   assistance of counsel, lack of notice, and record integrity failures arising from the

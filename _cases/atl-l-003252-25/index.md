@@ -1,5 +1,3 @@
----
-
 
 layout: case
 title: ATL-L-003252-25 – Equitable Relief
@@ -11,7 +9,7 @@ venue: Atlantic County
 case_type: Civil Action – Verified Complaint & Order to Show Cause (Emergency Injunctive Relief)
 role: Plaintiff
 dockets:
-  - ATL-L-003252-25
+  - docket: ATL-L-003252-25
     primary_docket: ATL-L-003252-25
     status: active
     filed_date: 2025-12-07

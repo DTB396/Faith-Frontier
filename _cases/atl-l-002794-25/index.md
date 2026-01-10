@@ -1,4 +1,3 @@
----
 
 layout: case
 title: ATL-L-002794-25 – Barber v. Tumelty
@@ -10,22 +9,21 @@ venue: Atlantic County
 case_type: Civil Action (Attorney Misconduct / Contract and Tort Claims)
 role: Plaintiff
 dockets:
-
-* ATL-L-002794-25
-  primary_docket: ATL-L-002794-25
-  status: active
-  filed_date: 2025-10-03
-  judge: Hon. Sarah B. Johnson, J.S.C.
-  tags:
-* civil
-* law-division
-* track-3
-* attorney-malpractice
-* fiduciary-duty
-* consumer-fraud
-* dispositive-motions
-  assets_dir: /cases/atl-l-002794-25/filings/
-  overview: >
+  - docket: ATL-L-002794-25
+    primary_docket: ATL-L-002794-25
+    status: active
+    filed_date: 2025-10-03
+    judge: Hon. Sarah B. Johnson, J.S.C.
+tags:
+  - civil
+  - law-division
+  - track-3
+  - attorney-malpractice
+  - fiduciary-duty
+  - consumer-fraud
+  - dispositive-motions
+assets_dir: /cases/atl-l-002794-25/filings/
+overview: >
   Active Law Division civil action arising from alleged attorney misconduct and failure to
   perform agreed legal services after acceptance of a retainer. Plaintiff asserts claims
   sounding in contract, fiduciary duty, statutory consumer fraud, fraud, negligence, unjust

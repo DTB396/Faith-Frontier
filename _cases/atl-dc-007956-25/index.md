@@ -1,4 +1,3 @@
----
 
 layout: case
 title: ATL-DC-007956-25 – Toll Enforcement
@@ -10,24 +9,23 @@ venue: Atlantic County
 case_type: Civil Collection (Toll Enforcement)
 role: Defendant / Counterclaimant
 dockets:
-
-* ATL-DC-007956-25
-  primary_docket: ATL-DC-007956-25
-  status: active
-  filed_date: 2025-03-28
-  judge: null
-  tags:
-* toll-enforcement
-* discovery
-* accessibility
-* due-process
-  assets_dir: /cases/atl-dc-007956-25/filings/
-  overview: >
+  - docket: ATL-DC-007956-25
+    primary_docket: ATL-DC-007956-25
+    status: active
+    filed_date: 2025-03-28
+    judge: null
+tags:
+  - toll-enforcement
+  - discovery
+  - accessibility
+  - due-process
+assets_dir: /cases/atl-dc-007956-25/filings/
+overview: >
   Active Special Civil Part action arising from alleged unpaid toll assessments.
   Defendant asserts counterclaims and defenses challenging process integrity,
   notice, data accuracy, and accessibility, including the need for reasonable
   accommodations to ensure meaningful participation.
-  case_slug: atl-dc-007956-25
+case_slug: atl-dc-007956-25
 
 ---
 

@@ -1,5 +1,8 @@
+
 {% assign essays = site.essays | default: site.posts %}
-{% assign doctrine = essays | where_exp: "p", "p.tags contains 'doctrine' or p.category contains 'theology' or p.categories contains 'theology'" %}
+{% assign doctrine_tagged = essays | where: "tags", "doctrine" %}
+{% assign theology_categorized = essays | where: "categories", "theology" %}
+{% assign doctrine = doctrine_tagged | concat: theology_categorized %}
 {% assign doctrine_sorted = doctrine | sort: "date" | reverse %}
 
 <section class="ff-doctrine-map" aria-labelledby="ff-doctrine-map-title">

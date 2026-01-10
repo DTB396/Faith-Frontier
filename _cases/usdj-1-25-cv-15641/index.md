@@ -1,4 +1,3 @@
----
 
 layout: case
 title: USDJ 1:25-cv-15641 – Barber v. Boyd et al.
@@ -10,21 +9,20 @@ venue: Camden Vicinage
 case_type: Civil Action – Federal Civil Rights and Equitable Relief
 role: Plaintiff
 dockets:
-
-* 1:25-cv-15641-RMB-MJS
-  primary_docket: 1:25-cv-15641-RMB-MJS
-  status: active
-  filed_date: 2025-09-09
-  judge: Hon. Renée Marie Bumb, C.J.
-  tags:
-* federal
-* district-court
-* civil-rights
-* section-1983
-* due-process
-* excessive-force
-  assets_dir: /cases/usdj-1-25-cv-15641/filings/
-  overview: >
+  - docket: 1:25-cv-15641-RMB-MJS
+    primary_docket: 1:25-cv-15641-RMB-MJS
+    status: active
+    filed_date: 2025-09-09
+    judge: Hon. Renée Marie Bumb, C.J.
+tags:
+  - federal
+  - district-court
+  - civil-rights
+  - section-1983
+  - due-process
+  - excessive-force
+assets_dir: /cases/usdj-1-25-cv-15641/filings/
+overview: >
   Active federal civil rights action brought under 42 U.S.C. § 1983 and related
   constitutional provisions. Plaintiff seeks damages, declaratory relief, and
   prospective injunctive relief arising from alleged unlawful seizure, excessive

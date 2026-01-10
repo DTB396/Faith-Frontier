@@ -1,4 +1,3 @@
----
 
 layout: case
 title: MER-L-002371-25 – Barber v. New Jersey MVC
@@ -10,21 +9,20 @@ venue: Mercer County
 case_type: Civil Action – Declaratory, Injunctive, and Due Process Relief
 role: Plaintiff
 dockets:
-
-* MER-L-002371-25
-  primary_docket: MER-L-002371-25
-  status: active
-  filed_date: 2025-11-14
-  judge: null
-  tags:
-* civil
-* law-division
-* mercer-county
-* due-process
-* administrative-law
-* license-suspension
-  assets_dir: /cases/mer-l-002371-25/filings/
-  overview: >
+  - docket: MER-L-002371-25
+    primary_docket: MER-L-002371-25
+    status: active
+    filed_date: 2025-11-14
+    judge: null
+tags:
+  - civil
+  - law-division
+  - mercer-county
+  - due-process
+  - administrative-law
+  - license-suspension
+assets_dir: /cases/mer-l-002371-25/filings/
+overview: >
   Active Law Division civil action challenging New Jersey Motor Vehicle Commission
   license-suspension and enforcement practices on procedural due-process grounds.
   Plaintiff seeks declaratory and injunctive relief to remedy alleged failures of notice,

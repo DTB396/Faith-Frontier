@@ -1,4 +1,3 @@
----
 
 layout: case
 title: ATL-L-002869-25 – Barber v. CarMax
@@ -10,21 +9,20 @@ venue: Atlantic County
 case_type: Civil Action – Declaratory and Equitable Relief (Vehicle Ownership and Indemnity)
 role: Plaintiff
 dockets:
-
-* ATL-L-002869-25
-* ATL-L-002908-25
-  primary_docket: ATL-L-002869-25
-  status: active
-  filed_date: 2025-10-14
-  judge: null
-  tags:
-* civil
-* declaratory-relief
-* equitable-relief
-* vehicle-title
-* indemnity
-  assets_dir: /cases/atl-l-002869-25/filings/
-  overview: >
+  - docket: ATL-L-002869-25
+    primary_docket: ATL-L-002869-25
+    status: active
+    filed_date: 2025-10-14
+    judge: null
+  - docket: ATL-L-002908-25
+tags:
+  - civil
+  - declaratory-relief
+  - equitable-relief
+  - vehicle-title
+  - indemnity
+assets_dir: /cases/atl-l-002869-25/filings/
+overview: >
   Active Law Division civil action seeking declaratory and equitable relief concerning
   disputed vehicle ownership, title status, and indemnity obligations arising from
   vehicle sale and registration records. Plaintiff challenges inaccurate or conflicting
