@@ -1,5 +1,6 @@
 
 layout: case
+status: active
 title: USDJ 1:25-cv-15641 – Barber v. Boyd et al.
 short_title: 1:25-cv-15641
 slug: usdj-1-25-cv-15641

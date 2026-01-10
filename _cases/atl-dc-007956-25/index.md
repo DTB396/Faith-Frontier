@@ -1,5 +1,6 @@
 
 layout: case
+status: active
 title: ATL-DC-007956-25 – Toll Enforcement
 short_title: ATL-DC-007956-25
 slug: atl-dc-007956-25
@@ -26,7 +27,6 @@ overview: >
   notice, data accuracy, and accessibility, including the need for reasonable
   accommodations to ensure meaningful participation.
 case_slug: atl-dc-007956-25
-
 ---
 
 ## Case Overview

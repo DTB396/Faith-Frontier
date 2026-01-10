@@ -1,5 +1,6 @@
 
 layout: case
+status: active
 title: ATL-L-002869-25 – Barber v. CarMax
 short_title: ATL-L-002869-25
 slug: atl-l-002869-25

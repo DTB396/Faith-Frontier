@@ -1,5 +1,6 @@
 
 layout: case
+status: pending
 title: Barber PCR (2022) – State v. Barber (Hardemon matters)
 short_title: Barber PCR (2022)
 slug: barber-nj-pcr-2022

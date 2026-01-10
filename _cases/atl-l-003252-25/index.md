@@ -1,5 +1,6 @@
 
 layout: case
+status: active
 title: ATL-L-003252-25 – Equitable Relief
 short_title: ATL-L-003252-25
 slug: atl-l-003252-25

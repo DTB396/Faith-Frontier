@@ -1,5 +1,6 @@
 
 layout: case
+status: active
 title: MER-L-002371-25 – Barber v. New Jersey MVC
 short_title: MER-L-002371-25
 slug: mer-l-002371-25
