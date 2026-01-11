@@ -19,7 +19,7 @@ Need a rapid snapshot? Visit the [Active Case Digest](/cases/active/) for the la
 </div>
 
 <div class="case-list" style="display: grid; gap: 1.5rem; margin-top: 2rem;">
-{% assign cases = site.cases | sort: "filed_date" | reverse %}
+{% assign cases = site.cases %}
 {% for case in cases %}
   <article class="case-card" style="background: var(--color-surface-alt); padding: 1.5rem; border-radius: 12px; border: 2px solid rgba(212, 165, 116, 0.2); transition: border-color 0.2s;">
     <h2 style="margin-top: 0; font-size: 1.5rem;">

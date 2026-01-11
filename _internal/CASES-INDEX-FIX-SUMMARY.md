@@ -61,7 +61,7 @@ cases/                           ← Asset directory + index page
 The `cases/index.md` page uses:
 
 ```liquid
-{% assign cases = site.cases | sort: "filed_date" | reverse %}
+{% assign cases = site.cases %}
 {% for case in cases %}
   <!-- Render each case -->
 {% endfor %}

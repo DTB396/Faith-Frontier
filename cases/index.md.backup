@@ -347,7 +347,7 @@ description: "Complete archive of Faith Frontier's legal proceedings—documenti
   
   <!-- Case List -->
   <div class="case-list" id="case-list">
-    {% assign cases = site.cases | sort: "filed_date" | reverse %}
+    {% assign cases = site.cases %}
     {% if cases.size == 0 %}
     <div class="no-results" style="display: block;">
       <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">No cases found in collection.</p>

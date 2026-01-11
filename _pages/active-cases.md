@@ -72,7 +72,7 @@ show_breadcrumbs: true
       </p>
     </div>
 
-    {% assign active_cases = site.cases | where: "status", "active" | sort: "filed_date" | reverse %}
+    {% assign active_cases = site.cases | where: "status", "active" %}
     {% if active_cases.size == 0 %}
       <p>No cases are flagged as active right now. Check back soon.</p>
     {% else %}

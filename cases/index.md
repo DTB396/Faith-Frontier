@@ -116,7 +116,7 @@ Resources Include: _includes/case-resources.html
         <label for="filter-court">Court</label>
         <select id="filter-court" class="filter-select">
           <option value="">All Courts</option>
-          {% assign all_courts = site.cases | where_exp: "case", "case.published != false" | map: "court" | uniq | sort %}
+          {% assign all_courts = site.cases | where_exp: "case", "case.published != false" | map: "court" | uniq %}
           {% for court in all_courts %}
             {% if court and court != "" %}
             <option value="{{ court }}">{{ court }}</option>
@@ -136,9 +136,9 @@ Resources Include: _includes/case-resources.html
   <section id="active-cases" style="margin-bottom: 3rem;">
     <h2 class="section-heading">Active Cases</h2>
     <div class="cases-grid" id="active-cases-grid">
-      {% assign active = site.cases | where: "status", "active" | where_exp: "case", "case.published != false and case.filed_date" | sort: "filed_date" | reverse %}
-      {% if active.size > 0 %}
-        {% for case in active %}
+      {% assign active_cases = site.cases | where: "status", "active" | where_exp: "case", "case.published != false" %}
+      {% if active_cases.size > 0 %}
+        {% for case in active_cases %}
           {% include case-card.html case=case %}
         {% endfor %}
       {% else %}
@@ -152,12 +152,12 @@ Resources Include: _includes/case-resources.html
   </section>
   
   <!-- ==================== PENDING CASES ==================== -->
-  {% assign pending = site.cases | where: "status", "pending" | where_exp: "case", "case.published != false and case.filed_date" | sort: "filed_date" | reverse %}
-  {% if pending.size > 0 %}
+  {% assign pending_cases = site.cases | where: "status", "pending" | where_exp: "case", "case.published != false" %}
+  {% if pending_cases.size > 0 %}
   <section style="margin-bottom: 3rem;">
     <h2 class="section-heading">Pending Decisions</h2>
     <div class="cases-grid">
-      {% for case in pending %}
+      {% for case in pending_cases %}
         {% include case-card.html case=case %}
       {% endfor %}
     </div>
@@ -165,12 +165,12 @@ Resources Include: _includes/case-resources.html
   {% endif %}
   
   <!-- ==================== CLOSED CASES ==================== -->
-  {% assign closed = site.cases | where: "status", "closed" | where_exp: "case", "case.published != false and case.filed_date" | sort: "filed_date" | reverse %}
-  {% if closed.size > 0 %}
+  {% assign closed_cases = site.cases | where: "status", "closed" | where_exp: "case", "case.published != false" %}
+  {% if closed_cases.size > 0 %}
   <section style="margin-bottom: 3rem;">
     <h2 class="section-heading">Closed Cases</h2>
     <div class="cases-grid">
-      {% for case in closed %}
+      {% for case in closed_cases %}
         {% include case-card.html case=case %}
       {% endfor %}
     </div>
