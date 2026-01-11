@@ -1,12 +1,13 @@
 [CmdletBinding()]
 param(
-  [string]$RepoRoot = (Resolve-Path "..").Path,
+  [string]$RepoRoot = (Resolve-Path ".." ).Path,
   [string]$Branch   = "main",
   [string]$Message  = "Automated deploy",
   [string]$RemoteUrl = "",
   [string]$RemoteName = "origin",
   [switch]$AllowBehind
 )
+
 $ErrorActionPreference = "Stop"
 Set-Location $RepoRoot
 
@@ -51,10 +52,6 @@ if ($LASTEXITCODE -ne 0) {
 Write-Host "✔ Remote reachable"
 
 Write-Host "== Fetching remote state =="
-git remote -v
-Write-Host "✔ Remote reachable"
-
-Write-Host "== Fetching remote state =="
 git fetch --prune $RemoteName
 if ($LASTEXITCODE -ne 0) {
   throw "Failed to fetch from '$RemoteName'."
@@ -84,7 +81,7 @@ if ($currentBranch -ne $Branch) {
   }
 }
 
-${upstream} = $(git rev-parse --abbrev-ref --symbolic-full-name "@{u}" 2>$null)
+$upstream = $(git rev-parse --abbrev-ref --symbolic-full-name "@{u}" 2>$null)
 if (-not $upstream) {
   $upstream = "$RemoteName/$Branch"
 }
@@ -131,11 +128,9 @@ Write-Host "`n== Jekyll build =="
 bundle exec jekyll clean
 bundle exec jekyll build --trace --strict_front_matter
 
-
 # --------------------------------------------------
 # 5. Commit + push (only if changes exist)
 # --------------------------------------------------
-
 Write-Host "`n== Git commit and push =="
 $hasChanges = $false
 try {

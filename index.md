@@ -1,12 +1,11 @@
 ---
-layout: default
+layout: home
 title: Faith Frontier
 body_class: ff-home
 permalink: /
 description: "Christian stewardship, neighborly-care, and lawfully managed enterprises—manifesto, pro se case docketing, petitions for relief, essays, and faith-based civic engagement resources."
 image: /assets/img/og/faith-frontier-og.jpg
 robots: "index,follow"
----
 
 <a class="skip-link" href="#main">Skip to content</a>
 
