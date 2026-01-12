@@ -42,7 +42,7 @@ This administrative record preserves OPRA requests concerning executive clemency
 
 ## Timeline
 
-{% include timeline.html source="opra/governor-clemency-public-safety-2025/timeline.yml" %}
+
 
 ## Documents and productions
 

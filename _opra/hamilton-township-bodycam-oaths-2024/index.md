@@ -36,7 +36,7 @@ This request is publicly tracked on OPRAmachine:
 
 ## Timeline
 
-{% include timeline.html source="opra/hamilton-township-bodycam-oaths-2024/timeline.yml" %}
+
 
 ## Documents
 

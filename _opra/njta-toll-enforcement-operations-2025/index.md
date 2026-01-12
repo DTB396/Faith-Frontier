@@ -40,7 +40,7 @@ This request is publicly tracked on OPRAmachine:
 
 ## Timeline
 
-{% include timeline.html source="opra/njta-toll-enforcement-operations-2025/timeline.yml" %}
+
 
 ## Documents
 

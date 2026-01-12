@@ -42,7 +42,7 @@ This request is publicly tracked on OPRAmachine:
 
 ## Timeline
 
-{% include timeline.html source="opra/njtpa-toll-infrastructure-2025/timeline.yml" %}
+
 
 ## Documents
 

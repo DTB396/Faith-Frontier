@@ -371,7 +371,7 @@ Explain what this OPRA request is seeking...
 
 ## Timeline
 
-{% include timeline.html source="opra/slug/timeline.yml" %}
+
 ```
 
 ### Step 4: Link from Case (Optional)

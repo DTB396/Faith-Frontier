@@ -45,7 +45,7 @@ hero_highlights:
         aria-hidden="true"
       />
       <span class="premium-brand__wordmark">
-        {% include \logo\faithfrontier-mark.svg %}
+
       </span>
     </div>
   </a>

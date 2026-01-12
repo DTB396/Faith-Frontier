@@ -16,7 +16,7 @@ stylesheet: /assets/css/home.css
 {% include faith-conscience-banner.html %}
   <!-- 2. MAIN CONTENT HERO (YOUR EXISTING HERO GRID) -->
   <!-- This stays exactly as you wrote it -->
-  {% include hero-panel.html %}
+
 
   <!-- 3. DAILY SCRIPTURE (ENHANCED, SINGLE SOURCE OF TRUTH) -->
   <!-- daily-verse-enhanced should TARGET #daily-verse -->

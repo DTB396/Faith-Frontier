@@ -37,7 +37,7 @@ This request is publicly tracked on OPRAmachine:
 
 ## Timeline
 
-{% include timeline.html source="opra/hamilton-township-police-bond-insurance-2025/timeline.yml" %}
+
 
 ## Documents
 
