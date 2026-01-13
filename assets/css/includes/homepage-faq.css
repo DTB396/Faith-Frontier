@@ -1,5 +1,7 @@
 /* Faith Frontier Homepage Include */
 
+.ff-home .premium-hero { display: none; }
+
 .ff-home { color: #d7e5ff; }
 
 .ff-hero {
