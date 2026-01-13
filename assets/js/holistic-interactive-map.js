@@ -6,8 +6,6 @@
 (() => {
     // Data from Jekyll
     const plantsData = window.HOLISTIC_DATA;
-    const frostData = window.HOLISTIC_FROST;
-    const stateZones = window.HOLISTIC_STATE_ZONES;
     const overmedData = window.HOLISTIC_OVERMEDICATION;
     const medicationStates = window.MEDICATION_STATES_DATA;
 
@@ -55,13 +53,6 @@
         if (!overmedData?.top_medicines) return null;
         return overmedData.top_medicines.find(m => 
             m.name.toLowerCase().includes(medName.toLowerCase())
-        );
-    }
-
-    function getPlantLineage(plantName) {
-        if (!overmedData?.lineage) return null;
-        return overmedData.lineage.find(l =>
-            l.drug.toLowerCase().includes(plantName.toLowerCase())
         );
     }
 
