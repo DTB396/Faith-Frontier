@@ -107,7 +107,7 @@ plugins:
   - jekyll-redirect-from
 
 # GitHub repository metadata
-repository: XTX33/FaithFrontier
+repository: DTB396/FaithFrontier.org
 
 # Include static files
 include:
