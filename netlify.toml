@@ -1,0 +1,20 @@
+[build]
+  command = "bundle exec jekyll build"
+  publish = "_site"
+
+[build.environment]
+  RUBY_VERSION = "3.4.7"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[context.production]
+  command = "bundle exec jekyll build"
+
+[context.deploy-preview]
+  command = "bundle exec jekyll build --drafts"
+
+[context.branch-deploy]
+  command = "bundle exec jekyll build"

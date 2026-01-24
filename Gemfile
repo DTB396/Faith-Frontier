@@ -1,12 +1,21 @@
 source "https://rubygems.org"
 
-# GitHub Pages gem includes Jekyll and plugins
-gem "github-pages", group: :jekyll_plugins
+# Use Jekyll directly instead of github-pages for Ruby 3.4 compatibility
+gem "jekyll", "~> 3.10"
+gem "kramdown-parser-gfm"
+
+# Ruby 3.4+ compatibility gems
+gem "base64"
+gem "csv"
+gem "logger"
+gem "bigdecimal"
 
 # Additional plugins
 group :jekyll_plugins do
   gem "jekyll-feed"
   gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
+  gem "jekyll-redirect-from"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
